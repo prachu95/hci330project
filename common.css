@@ -31,6 +31,56 @@ body {
 	color: white;
 }
 
+input[type=text], select {
+    width: 40%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+input[type=submit] {
+    width: 30%;
+    background-color: #4CAF50;
+	
+    color: white;
+    padding: 14px 20px;
+	margin-left: auto;
+	margin-right: auto;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+	display: inline-block;
+}
+
+input[type=submit]:hover {
+    background-color: #45a049;
+}
+
+
+.form_area {
+	width: 80%;
+	
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	padding-bottom: 40;
+	box-shadow: 0 0 4px #ccc;
+	border-radius: 5px;
+    background-color: #f2f2f2;
+}
+.form_region {
+
+	width: 40%;
+	display: inline-block;
+    padding: 20px;
+
+
+}
+</style>
+
 #home_nav {
 	float: left;
 	color: #f2f2f2;	

@@ -15,10 +15,50 @@
 	<a href="FoIA_page.html">FoIA</a>
 </div>
 
-<div style="padding-left:16px">
-	<h2>More Content</h2>
-	<p>TEXT</p>
+<div class= style="padding-left:16px">
+	<h2>Filing a Request</h2>
+	<p>[Info on that...]</p>
+	<p>[To do: add rest of fields for form, finish styling form, center button, add appropriate text here]</p>
 </div>
+
+<div class= "form_area">
+	<form action="ACTION GOES HERE"> <!-- NOTICE: this doesn't work yet -->
+		<div class="form_region">
+			<h1>User Information</h1>
+			<label for="fname">First Name</label>
+			<input type="text" id="fname" name="firstname" placeholder="Your name...">
+
+			<label for="lname">Last Name</label>
+			<input type="text" id="lname" name="lastname" placeholder="Your last name...">
+			
+			<!-- Left this just in case
+			<label for="country">Country</label>
+			<select id="country" name="country">
+			  <option value="australia">Australia</option>
+			  <option value="canada">Canada</option>
+			  <option value="usa">USA</option>
+			</select> -->
+		</div>
+		
+		<div class="form_region">
+			<h1>Report Information</h1>
+				<label for="badgeID">Badge #</label>
+				<input type="text" id="badgeID" name="badgenumber" placeholder="Officer's Badge #...">
+
+			<label for="oname">Officer Name</label>
+			<input type="text" id="oname" name="officername" placeholder="Officer's name...">
+			
+			<!-- Left this just in case
+			<label for="country">Country</label>
+			<select id="country" name="country">
+			  <option value="australia">Australia</option>
+			  <option value="canada">Canada</option>
+			  <option value="usa">USA</option>
+			</select> -->
+		</div>
+</div>
+    <input type="submit" value="Submit">
+	</form>
 
    </body>
 </html>
