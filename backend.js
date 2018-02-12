@@ -1,4 +1,4 @@
-// This is a test message for git. 
+// This is a test message for git.
 var zChar = new Array(' ', '(', ')', '-', '.');
 var maxphonelength = 13;
 var phonevalue1;
@@ -172,4 +172,26 @@ function ParseChar(sStr, sChar) {
 
 function submitForm() {
 	return void;
+}
+
+/* When the user clicks on the button,
+toggle between hiding and showing the dropdown content */
+
+function addButton() {
+    document.getElementById("addDropdown").classList.toggle("show");
+}
+
+// Close the dropdown if the user clicks outside of it
+window.onclick = function(event) {
+  if (!event.target.matches('.dropbtn')) {
+
+    var dropdowns = document.getElementsByClassName("dropdown-content");
+    var i;
+    for (i = 0; i < dropdowns.length; i++) {
+      var openDropdown = dropdowns[i];
+      if (openDropdown.classList.contains('show')) {
+        openDropdown.classList.remove('show');
+      }
+    }
+  }
 }
