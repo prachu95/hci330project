@@ -1,3 +1,9 @@
+/*
+
+	Header Styling
+
+*/
+
 body {
 	margin: 0;
 	font-family: Arial, Helvetica, sans-serif;
@@ -10,7 +16,7 @@ body {
 
 .topnav a {
 	float: left;
-	color: #f2f2f2;	
+	color: #f2f2f2;
 	text-align: center;
 	padding-top: 15px;
 	padding-bottom: 5px;
@@ -30,6 +36,14 @@ body {
 	background-color: #4CAF50;
 	color: white;
 }
+
+
+
+/*
+
+	FoIA_page Styling
+
+*/
 
 input[type=text], select {
     width: 40%;
@@ -59,7 +73,7 @@ input[type=submit]:hover {
 
 .form_area {
 	width: 80%;
-	
+
 	display: block;
 	margin-left: auto;
 	margin-right: auto;
@@ -83,8 +97,42 @@ input[type=submit]:hover {
 
 #home_nav {
 	float: left;
-	color: #f2f2f2;	
+	color: #f2f2f2;
 	line-height: 20px;
 	text-align: center;
 	font-size: 17px;
 }
+
+
+
+
+/*
+
+	search_page Styling
+
+*/
+
+
+/*
+
+	results_page Styling
+
+*/
+
+
+
+
+/*
+
+	home_page Styling
+
+*/
+
+
+
+
+/*
+
+	stats Styling
+
+*/
