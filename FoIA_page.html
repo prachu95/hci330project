@@ -6,61 +6,65 @@
     </head>
     <body>
 
+<!-- NAV BAR -->
 <div class="topnav">
 	<div id="home_nav">
-		 <a href="home_page.html"><img src="image\logo.png" style="width:20px;height:20px;" alt="Home">
-		 &nbsp;&nbsp;CPAP</div>
+		 <a href="home_page.html" style="font-size: 20"><img src="image\logo.png" style="width:20px;height:20px;" alt="Home">
+		 <strong>&nbsp;&nbsp;Project Aequitas</strong></div>
 	<a href="search_page.html">Records</a>
 	<a href="stats.html">Statistic</a>
-	<a href="FoIA_page.html">FoIA</a>
+	<a style="background-color: #DC0028" href="FoIA_page.html">FoIA</a>
 </div>
 
-<div class= style="padding-left:16px">
-	<h2>Filing a Request</h2>
-	<p>[Info on that...]</p>
-	<p>[To do: add rest of fields for form, finish styling form, center button, add appropriate text here]</p>
+<div class="FoIA_info">
+	<h2 id="page_title">Filing a Request</h2>
+	<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras sem libero, auctor sed arcu sit amet,
+	efficitur condimentum nisl. Aliquam vel finibus erat, sit amet molestie nulla. Nullam et ex mauris.
+	Praesent bibendum neque ac fermentum mattis. Pellentesque habitant morbi tristique senectus et netus et
+	malesuada fames ac turpis egestas. Curabitur nec orci turpis. Phasellus semper efficitur mi. Vivamus pharetra
+	erat at justo laoreet, sit amet lobortis lorem suscipit.
+	Sed varius dignissim nulla, eget vehicula lectus commodo ut.
+	Aliquam quis tortor et nulla sagittis rutrum. Donec eu ante eros.</p>
+	<p>[To do: add rest of fields for form, finish styling form, add appropriate text here]</p>
 </div>
 
 <div class= "form_area">
-	<form action="ACTION GOES HERE"> <!-- NOTICE: this doesn't work yet -->
+	<form action="submitForm()"> <!-- NOTICE: this doesn't work yet -->
 		<div class="form_region">
-			<h1>User Information</h1>
-			<label for="fname">First Name</label>
-			<input type="text" id="fname" name="firstname" placeholder="Your name...">
+			<h1>Your Information</h1>
+			<label for="name">Name</label>
+			<input type="text" id="name" name="name" placeholder="Your name ...">
 
-			<label for="lname">Last Name</label>
-			<input type="text" id="lname" name="lastname" placeholder="Your last name...">
+			<label for="email">Email</label>
+			<input type="text" id="email" name="email" placeholder="Your email ...">
 
-			<!-- Left this just in case
-			<label for="country">Country</label>
-			<select id="country" name="country">
-			  <option value="australia">Australia</option>
-			  <option value="canada">Canada</option>
-			  <option value="usa">USA</option>
-			</select> -->
+			<label for="address">Home Address</label>
+			<input type="text" id="address" name="address" placeholder="Your address ...">
+
+			<label for="address">Phone Number</label>
+			<input id="bar" placeholder="(xxx)xxx-xxxx" type="text" type="text"
+			name="txtInput" onkeydown="javascript:backspacerDOWN(this,event);"
+			onkeyup="javascript:backspacerUP(this,event);">
 		</div>
 
 		<div class="form_region">
 			<h1>Report Information</h1>
-				<label for="badgeID">Badge #</label>
-				<input type="text" id="badgeID" name="badgenumber" placeholder="Officer's Badge #...">
 
 			<label for="oname">Officer Name</label>
-			<input type="text" id="oname" name="officername" placeholder="Officer's name...">
+			<input type="text" id="oname" name="officername" placeholder="Officer's name ...">
 
-			<!-- Left this just in case
-			<label for="country">Country</label>
-			<select id="country" name="country">
-			  <option value="australia">Australia</option>
-			  <option value="canada">Canada</option>
-			  <option value="usa">USA</option>
-			</select> -->
+			<label for="badgeID">Badge #</label>
+			<input type="text" id="badgeID" name="badgenumber" placeholder="Officer's Badge # ...">
+
+			<label for="msg">Additional Information:</label>
+			<textarea id="msg" name="user_message" placeholder="Enter message ..."></textarea>
+
 		</div>
 </div>
 <div class="submit_area">
     <input type="submit" value="Submit">
 </div>
 </form>
-
-   </body>
+<script src="backend.js"></script>
+</body>
 </html>
