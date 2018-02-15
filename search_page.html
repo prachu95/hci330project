@@ -19,12 +19,37 @@
 
 <div style="padding-left:16px">
 	<h2 id="page_title">Search for Records</h2>
-	<p>TEXT</p>
 </div>
 
 
+
+<div class="search_region">
+  <input type="text" id="search_box_entry" name="officername" placeholder="Search By: Officer Name"></input>
+  <input type="text" id="search_box_entry" name="officerBadge" placeholder="Search By: Officer Badge"></input>
+<form  id="drop_down" action="">
+  <select name="searh_options">
+    <option value="search" selected>Search By: </option>
+    <option value="saab">Incident Date</option>
+    <option value="fiat">Outcome</option>
+    <option value="audi">Comments</option>
+      <option value="audi">Other Details</option>
+  </select>
+  <button>Add</button>
+  <button> Search </button>
+</form>
+
+</div>
+
+
+
+
+
+
 <!-- *Search Region. Will dynamically expand when the user wants to add more
-     * search fields. -->
+     * search fields.
+
+** By Prashanth. This code is for seach_add button drop down menu.
+
 <div id="search_region">
   <input type="text" id="search_box_entry" name="officername" placeholder="Search by Officer Name"></input>
   <div class="dropdown">
@@ -40,6 +65,7 @@
 </div>
 
 
+-->
 
 
 </body>

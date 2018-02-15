@@ -128,10 +128,41 @@ textarea {
 
 */
 
-#search_box_entry{
-	width: 25%;
-	margin: 20px;
+.search_region{
+
+	display: inline-block;
+
+
 }
+
+
+#search_box_entry{
+
+	float: left;
+	width: 225px;
+	margin: 25px;
+}
+
+
+
+#drop_down{
+	float: right;
+	width: 150px;
+	margin: 25px;
+}
+
+#drop_down button{
+
+
+}
+
+
+
+
+
+
+
+
 
 .dropdown a:hover {background-color: #ddd}
 

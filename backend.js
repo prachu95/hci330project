@@ -1,4 +1,12 @@
 // This is a test message for git.
+
+/*
+
+FoIA_page.html js elements.
+
+    */
+
+
 var zChar = new Array(' ', '(', ')', '-', '.');
 var maxphonelength = 13;
 var phonevalue1;
@@ -174,8 +182,50 @@ function submitForm() {
 	return void;
 }
 
+/*
+
+home_page.html js elements.
+
+*/
+
+
+
+
+
+/*
+
+    result_page.html js elements.
+
+*/
+
+
+
+/*
+
+        stats.html js elements.
+
+*/
+
+
+
+
+/*
+
+search_page.html js elements.
+
+*/
+
+
 /* When the user clicks on the button,
 toggle between hiding and showing the dropdown content */
+
+
+
+/*
+
+-- By Prashanth, will modify thr option by next week.
+-- Will change it such that the button gives the drop down menu.
+-- 
 
 function addButton() {
     document.getElementById("addDropdown").classList.toggle("show");
@@ -195,3 +245,4 @@ window.onclick = function(event) {
     }
   }
 }
+*/
