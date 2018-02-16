@@ -5,7 +5,7 @@ A web application to assist victims of police violence.
 * File an FoIA application to access mising information
 
 ### Members:
-Kashish Goyal
-Cameron Roberts
-Spenser Simon
-Prashanth Tirupachur Vasanthakrishnan
+** Kashish Goyal
+** Cameron Roberts
+** Spenser Simon
+** Prashanth Tirupachur Vasanthakrishnan
