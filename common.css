@@ -287,12 +287,15 @@ a.search_button {
   width:100%;
   background-color:#bbb;
   margin-top: 10px;
-  padding: 5px;
+  padding: 15px;
+  text-decoration-color: white;
+  line-height: 1px;
 }
-
-.footer p{
+/*
+.footer span{
   line-height: -1px;
-}
+  text-decoration-color: white;
+}*/
 /*
 
 	stats Styling
