@@ -18,43 +18,39 @@
 
 <div class="FoIA_info">
 	<h2 id="page_title">Filing a Request</h2>
-	<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras sem libero, auctor sed arcu sit amet,
-	efficitur condimentum nisl. Aliquam vel finibus erat, sit amet molestie nulla. Nullam et ex mauris.
-	Praesent bibendum neque ac fermentum mattis. Pellentesque habitant morbi tristique senectus et netus et
-	malesuada fames ac turpis egestas. Curabitur nec orci turpis. Phasellus semper efficitur mi. Vivamus pharetra
-	erat at justo laoreet, sit amet lobortis lorem suscipit.
-	Sed varius dignissim nulla, eget vehicula lectus commodo ut.
-	Aliquam quis tortor et nulla sagittis rutrum. Donec eu ante eros.</p>
-	<p>[To do: add rest of fields for form, finish styling form, add appropriate text here]</p>
+	<p id="page_body">This form will submit a Freedom of Information Request to the City of Chicago
+	to request disciplinary records for an officer. The request will be made publicly available. The request
+	will be processed within five days. You will then be notified by the City of Chicago on the outcome of your
+	request. Scans of the disciplinary records will be sent to the requester if the request is accepted.</p>
 </div>
 
 <div class= "form_area">
-	<form action="submitForm()"> <!-- NOTICE: this doesn't work yet -->
+	<form name="myForm" onsubmit="return submitForm()" method="post"> <!-- NOTICE: this doesn't work yet -->
 		<div class="form_region">
 			<h1>Your Information</h1>
 			<label for="name">Name</label>
-			<input type="text" id="name" name="name" placeholder="Your name ...">
+			<input type="text" id="name" name="name" placeholder="Your name ..." required>
 
 			<label for="email">Email</label>
-			<input type="text" id="email" name="email" placeholder="Your email ...">
+			<input type="text" id="email" name="email" placeholder="Your email ..." required>
 
 			<label for="address">Home Address</label>
-			<input type="text" id="address" name="address" placeholder="Your address ...">
+			<input type="text" id="address" name="address" placeholder="Your address ..." required>
 
 			<label for="address">Phone Number</label>
 			<input id="bar" placeholder="(xxx)xxx-xxxx" type="text" type="text"
 			name="txtInput" onkeydown="javascript:backspacerDOWN(this,event);"
-			onkeyup="javascript:backspacerUP(this,event);">
+			onkeyup="javascript:backspacerUP(this,event);" required>
 		</div>
 
 		<div class="form_region">
 			<h1>Report Information</h1>
 
 			<label for="oname">Officer Name</label>
-			<input type="text" id="oname" name="officername" placeholder="Officer's name ...">
+			<input type="text" id="oname" name="officername" placeholder="Officer's name ..." required>
 
 			<label for="badgeID">Badge #</label>
-			<input type="text" id="badgeID" name="badgenumber" placeholder="Officer's Badge # ...">
+			<input type="text" id="badgeID" name="badgenumber" placeholder="Officer's Badge # ..." required>
 
 			<label for="msg">Additional Information:</label>
 			<textarea id="msg" name="user_message" placeholder="Enter message ..."></textarea>
@@ -62,7 +58,8 @@
 		</div>
 </div>
 <div class="submit_area">
-    <input type="submit" value="Submit">
+    <!--<input type="submit" value="Submit">-->
+	<a class="submit_button" href="FoIA_page_success.html">Submit</a>
 </div>
 </form>
 <script src="backend.js"></script>
