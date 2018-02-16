@@ -3,6 +3,8 @@
 	    <title>Record</title>
         <link rel="stylesheet" type="text/css" href="common.css"/>
 		<link rel="icon" href="image\favicon-16x16.png">
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     </head>
     <body>
 
@@ -18,9 +20,110 @@
 
 <div style="padding-left:16px">
 	<h2>More Content</h2>
-	<p>TEXT</p>
+	
 </div>
 
 <script src="backend.js"></script>
 </body>
 </html>
+
+<!-- SEARCH BAR -->
+<div class="search_region">
+  <input type="text" id="search_box_entry" name="officername" placeholder="Search By: Officer Name"></input>
+  <input type="text" id="search_box_entry" name="officerBadge" placeholder="Search By: Officer Badge"></input>
+<form  id="drop_down" action="">
+  <select name="searh_options">
+    <option value="search" selected>Search By: </option>
+    <option value="saab">Incident Date</option>
+    <option value="fiat">Outcome</option>
+    <option value="audi">Comments</option>
+      <option value="audi">Other Details</option>
+  </select>
+  <button>Add</button>
+  <button> Search </button>
+</form>
+</div>
+
+<!-- RESULTS -->
+
+<div class="results_table">
+	<table class="results_table" id="initial_results">
+		<tr>
+    		<th>Name <span class="fa fa-fw fa-sort"></span></th>	<!-- Do we want to separate first name and last name into 2 fields? -->
+   		 	<th>Badge # <span class="fa fa-fw fa-sort"></span></th>
+    		<th>Incident Date <span class="fa fa-fw fa-sort"></span></th>
+    		<th>Location <span class="fa fa-fw fa-sort"></span></th>
+    		<th>Race <span class="fa fa-fw fa-sort"></span></th>
+    		<th>Sex <span class="fa fa-fw fa-sort"></span></th>
+    		<th>Outcome <span class="fa fa-fw fa-sort"></span></th>
+    		<th># of Comments <span class="fa fa-fw fa-sort"></span></th>
+  		</tr>
+  		<tr onclick="resultsRowToLink()">
+    		<td>Jerome Finnigan</td>
+    		<td>5167</td>
+    		<td>January 1, 2011</td>
+    		<td>123 Main St., Chicago</td>
+    		<td>White</td>
+    		<td>Male</td>
+    		<td>No Action Taken</td>
+    		<td>27</td>
+ 		 </tr>
+ 		 <tr>
+    		<td>Keith Herrera</td>
+    		<td>17289</td>
+    		<td>June 30, 2005</td>
+    		<td>712 Pine St., Chicago</td>
+    		<td>White/Hispanic</td>
+    		<td>Male</td>
+    		<td>No Action Taken</td>
+    		<td>14</td>
+ 		 </tr>
+ 		 <tr>
+    		<td>Sean Campbell</td>
+    		<td>5673</td>
+    		<td>August 12, 2014</td>
+    		<td>2099 Michigan Ave., Chicago</td>
+    		<td>White</td>
+    		<td>Male</td>
+    		<td>Unknown</td>
+    		<td>41</td>
+ 		 </tr>
+  		<tr onclick="resultsRowToLink()">
+    		<td>Jerome Finnigan</td>
+    		<td>5167</td>
+    		<td>January 1, 2011</td>
+    		<td>123 Main St., Chicago</td>
+    		<td>White</td>
+    		<td>Male</td>
+    		<td>No Action Taken</td>
+    		<td>27</td>
+ 		 </tr>
+ 		 <tr>
+    		<td>Keith Herrera</td>
+    		<td>17289</td>
+    		<td>June 30, 2005</td>
+    		<td>712 Pine St., Chicago</td>
+    		<td>White/Hispanic</td>
+    		<td>Male</td>
+    		<td>No Action Taken</td>
+    		<td>14</td>
+ 		 </tr>
+ 		 <tr>
+    		<td>Sean Campbell</td>
+    		<td>5673</td>
+    		<td>August 12, 2014</td>
+    		<td>2099 Michigan Ave., Chicago</td>
+    		<td>White</td>
+    		<td>Male</td>
+    		<td>Unknown</td>
+    		<td>41</td>
+ 		 </tr>
+	</table>
+
+</div>
+
+<script>
+function resultsRowToLink() {
+	location.href="result_expanded.html";
+}
+</script>

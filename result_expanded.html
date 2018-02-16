@@ -1,0 +1,72 @@
+<html>
+    <head>
+	    <title>Record</title>
+        <link rel="stylesheet" type="text/css" href="common.css"/>
+		<link rel="icon" href="image\favicon-16x16.png">
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    </head>
+    <body>
+
+<!-- NAV BAR -->
+<div class="topnav">
+	<div id="home_nav">
+		 <a href="home_page.html" style="font-size: 20"><img src="image\logo.png" style="width:20px;height:20px;" alt="Home">
+		 <strong>&nbsp;&nbsp;Project Aequitas</strong></div>
+	<a style="background-color: #DC0028" href="search_page.html">Records</a>
+	<a href="stats.html">Statistic</a>
+	<a href="FoIA_page.html">FoIA</a>
+</div>
+
+<div style="padding-left:16px">
+	<div class="back-to-results">
+		<a href="results_page.html">
+			<button type="button"> <i class="fa fa-arrow-left">Back to all results</i></button>
+		</a>
+	</div>
+	<p>TEXT</p>
+</div>
+
+<script src="backend.js"></script>
+</body>
+</html>
+
+
+
+
+<!-- SEARCH BAR -->
+<div class="search_region">
+  <input type="text" id="search_box_entry" name="officername" placeholder="Search By: Officer Name"></input>
+  <input type="text" id="search_box_entry" name="officerBadge" placeholder="Search By: Officer Badge"></input>
+<form  id="drop_down" action="">
+  <select name="searh_options">
+    <option value="search" selected>Search By: </option>
+    <option value="saab">Incident Date</option>
+    <option value="fiat">Outcome</option>
+    <option value="audi">Comments</option>
+      <option value="audi">Other Details</option>
+  </select>
+  <button>Add</button>
+  <button> Search </button>
+</form>
+</div>
+
+<!-- RESULT INFORMATION -->
+
+<div class="result-information">
+	<h3>Name: Jerome Finnigan</h3>
+	<p>Badge #: 5167</p>
+	<p>Incident Date: January 1, 2011</p>
+	<p>Location: 123 Main St., Chicago</p>
+	<p>Race: White</p>
+	<p>Sex: Male</p>
+	<p>Outcome: No action taken</p>
+	<p>Description: Here is a more in depth description of the event that took place. </p>
+</div>
+
+
+<div class="comments">
+
+</div>
+
+

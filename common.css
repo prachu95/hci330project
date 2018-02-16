@@ -151,14 +151,19 @@ textarea {
 	margin: 25px;
 }
 
-#drop_down button{
-
-
+a.search_button {
+    -webkit-appearance: button;
+    -moz-appearance: button;
+    appearance: button;
+    text-decoration: none;
+    color: initial;
 }
 
 
 
-
+.search_button a{
+	text-decoration: none;
+}
 
 
 
@@ -210,6 +215,39 @@ textarea {
 	results_page Styling
 
 */
+
+.results_table {
+	width: 90%;
+	padding-left: 25px;
+}
+
+#initial_results {
+	width: 100%;
+	border-collapse: collapse;
+}
+
+#initial_results td, #initial_results th {
+	border: 1px solid black;
+	padding: 5px;
+}
+
+#initial_results tr:nth-child(even) {background-color: #f2f2f2;}
+#initial_results tr:hover {background-color: #ddd;}
+
+#initial_results th {
+	padding-top: 10px;
+	padding-bottom: 10px;
+	background-color: black;
+	color: white;
+}
+
+.back-to-results {
+	padding-top: 10px;
+}
+.result-information {
+	padding-left: 25px;
+}
+
 
 
 
