@@ -281,8 +281,18 @@ a.search_button {
   justify-content: space-between;
 }
 
+.footer {
+  display: block;
+  text-align: center;
+  width:100%;
+  background-color:#bbb;
+  margin-top: 10px;
+  padding: 5px;
+}
 
-
+.footer p{
+  line-height: -1px;
+}
 /*
 
 	stats Styling
