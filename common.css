@@ -4,7 +4,7 @@
 
 */
 
-body {  
+body {
 	margin: 0;
 	font-family: Arial, Helvetica, sans-serif;
 }
@@ -309,7 +309,7 @@ a.search_button {
   border-radius: 10px;
   background-color: lightblue;
   margin-top: 2%;
-  text-align: center ; 
+  text-align: center ;
   margin-left: 10%;
   line-height: 300%;
   justify-content: space-between;
@@ -331,10 +331,14 @@ a.search_button {
   margin: 5px auto;
 }
 
+
 body {
-  background-image: url("image/main.png");
-  background-repeat: no-repeat; 
-  background-position: 100% 70%; 
+
+	
+	background-image: url("image/main.png");
+
+  background-repeat: no-repeat;
+  background-position: 100% 70%;
 }
 
 
