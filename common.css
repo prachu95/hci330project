@@ -9,6 +9,21 @@ body {
 	font-family: Arial, Helvetica, sans-serif;
 }
 
+#page_title {
+	font-size: 50;
+	width: 80%;
+	margin: auto;
+	padding-top: 25;
+	padding-left: 10;
+}
+
+#page_body {
+	padding-top: 20;
+	padding-left: 15;
+	width: 80%;
+	margin: auto;
+}
+
 /* --------- */
 /*  nav_bar  */
 /* --------- */
@@ -106,9 +121,26 @@ textarea {
 }
 
 .submit_area {
-	padding-top: 18;
+	padding-top: 50;
 	padding-bottom: 50;
 	text-align: center;
+}
+
+.submit_button {
+    width: 35%;
+	text-decoration: none;
+	font-weight: bold;
+    background-color: #157E8A;
+    color: white;
+    padding: 14px 120px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+	display: inline;
+}
+
+.submit_button:hover {
+    background-color: #0AD1FB;
 }
 
 #home_nav {
@@ -119,7 +151,10 @@ textarea {
 	font-size: 17px;
 }
 
-
+#confirm_text {
+	text-align: center;
+	padding-top:  50;
+}
 
 
 /*

@@ -179,7 +179,7 @@ function ParseChar(sStr, sChar) {
 }
 
 function submitForm() {
-	return void;
+	window.location.replace("FoIA_page_success.html")
 }
 
 /*
