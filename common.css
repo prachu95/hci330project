@@ -257,46 +257,31 @@ a.search_button {
 	home_page Styling
 
 */
-.main{
-  margin-left: auto;
-
-}
-
 .about {
   display: inline-block;
   width: 80%;
-  /*height: 80%;*/
   padding: 5%;
   margin-left: 5%;
   margin-top: 5%;
   background-color: #999;
   border-radius: 30px;
   opacity: 0.5;
-  /*text-decoration: none;*/
 }
 
-#ptag{
-  text-decoration-color: red; 
-  opacity: 1;
-}
 
 .buttons {
   display: inline-block;
   width: 20%;
-  /*height: 10%;*/
   border-radius: 10px;
   background-color: lightblue;
   margin-top: 5%;
   text-align: center ; 
   margin-left: 10%;
   line-height: 300%;
-  /*font-size: 30px;*/
   justify-content: space-between;
 }
 
-.buttons a {
-  text-decoration: none;
-}
+
 
 /*
 
