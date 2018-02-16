@@ -265,7 +265,7 @@ a.search_button {
   margin-top: 5%;
   background-color: #999;
   border-radius: 30px;
-  opacity: 0.5;
+  opacity: 0.7;
 }
 
 
@@ -274,7 +274,7 @@ a.search_button {
   width: 20%;
   border-radius: 10px;
   background-color: lightblue;
-  margin-top: 5%;
+  margin-top: 2%;
   text-align: center ; 
   margin-left: 10%;
   line-height: 300%;
@@ -288,6 +288,22 @@ a.search_button {
   margin-top: 10px;
   text-decoration-color: white;
 }
+
+
+.main {
+  display: block;
+  width: 75px;
+  height: 76px;
+  margin: 5px auto;
+}
+
+body {
+  background-image: url("image/main.png");
+  background-repeat: no-repeat; 
+  background-position: 100% 70%; 
+}
+
+
 /*
 
 
