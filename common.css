@@ -11,10 +11,7 @@ body {
 
 #page_title {
 	font-size: 50;
-	width: 80%;
-	margin: auto;
-	padding-top: 25;
-	padding-left: 10;
+	margin: 20px 10px;
 }
 
 #page_body {
@@ -111,6 +108,7 @@ textarea {
 	box-shadow: 0 0 4px #ccc;
 	border-radius: 5px;
     background-color: #f2f2f2;
+    opacity: 0.9;
 }
 
 .form_region {
@@ -176,14 +174,15 @@ textarea {
 	float: left;
 	width: 225px;
 	margin: 25px;
+  height: 50px;
 }
 
 
 
 #drop_down{
 	float: right;
-	width: 150px;
-	margin: 25px;
+	width: 250px;
+	margin: 18px 25px;
 }
 
 a.search_button {
