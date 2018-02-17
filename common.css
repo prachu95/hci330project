@@ -6,7 +6,9 @@
 
 body {
 	margin: 0;
+	position: relative;
 	font-family: Arial, Helvetica, sans-serif;
+	padding-bottom: 150;
 }
 
 #page_title {
@@ -51,6 +53,8 @@ body {
 	background-color: #4CAF50;
 	color: white;
 }
+
+
 
 /* --------- */
 /* FoIA_Page */
@@ -162,10 +166,7 @@ textarea {
 */
 
 .search_region{
-
 	display: inline-block;
-
-
 }
 
 
@@ -315,12 +316,25 @@ a.search_button {
   justify-content: space-between;
 }
 
-.footer {
-  display: block;
-  text-align: center;
-  background-color:#bbb;
-  margin-top: 10px;
-  text-decoration-color: white;
+.footer-wrapper {
+	position: absolute;
+	  right: 0;
+  bottom: 0;
+  left: 0;
+	padding-bottom: 40;
+	width: 100%;
+	height: 10;
+	padding-top: -80;
+	padding-bottom: 70; 
+	text-align: center;
+	color: #f2f2f2;
+	background-color: #333;
+	margin-top: 70px;
+	text-decoration-color: white;
+}
+
+.footer-text {
+	padding-top: 10;
 }
 
 
@@ -334,8 +348,8 @@ a.search_button {
 
 body {
 	background-image: url("image/main.png");
-  background-repeat: no-repeat;
-  background-position: 100% 70%;
+	background-repeat: no-repeat;
+	background-position: 100% 70%;
 }
 
 
