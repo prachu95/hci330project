@@ -49,74 +49,65 @@
 <div class="results_table">
 	<table class="results_table" id="initial_results">
 		<tr>
-    		<th>Name <span class="fa fa-fw fa-sort"></span></th>	<!-- Do we want to separate first name and last name into 2 fields? -->
-   		 	<th>Badge # <span class="fa fa-fw fa-sort"></span></th>
-    		<th>Incident Date <span class="fa fa-fw fa-sort"></span></th>
-    		<th>Location <span class="fa fa-fw fa-sort"></span></th>
-    		<th>Race <span class="fa fa-fw fa-sort"></span></th>
-    		<th>Sex <span class="fa fa-fw fa-sort"></span></th>
-    		<th>Outcome <span class="fa fa-fw fa-sort"></span></th>
-    		<th># of Comments <span class="fa fa-fw fa-sort"></span></th>
+			<!--Table is sorted when header (icon?) is clicked -->  
+    		<th onclick="sortTable(0)">Name <span class="fa fa-fw fa-sort">
+    			</span></th> <!-- Do we want to separate first name and last name into 2 fields? -->
+   		 	<th onclick="sortTableNum(1)">Badge # <span class="fa fa-fw fa-sort">
+   		 		</span></th>
+    		<th onclick="sortTable(2)">Race <span class="fa fa-fw fa-sort">
+    			</span></th>
+    		<th onclick="sortTable(3)">Sex <span class="fa fa-fw fa-sort">
+    			</span></th>
+    		<th> 
+    			</span></th>
   		</tr>
   		<tr onclick="resultsRowToLink()">
     		<td>Jerome Finnigan</td>
     		<td>5167</td>
-    		<td>January 1, 2011</td>
-    		<td>123 Main St., Chicago</td>
     		<td>White</td>
     		<td>Male</td>
-    		<td>No Action Taken</td>
-    		<td>27</td>
+    		<td><button> View Incidents </button></td>
+
  		 </tr>
  		 <tr>
     		<td>Keith Herrera</td>
     		<td>17289</td>
-    		<td>June 30, 2005</td>
-    		<td>712 Pine St., Chicago</td>
     		<td>White/Hispanic</td>
     		<td>Male</td>
-    		<td>No Action Taken</td>
-    		<td>14</td>
+    		<td><button> View Incidents </button></td>
+
  		 </tr>
  		 <tr>
     		<td>Sean Campbell</td>
     		<td>5673</td>
-    		<td>August 12, 2014</td>
-    		<td>2099 Michigan Ave., Chicago</td>
     		<td>White</td>
     		<td>Male</td>
-    		<td>Unknown</td>
-    		<td>41</td>
+    		<td><button> View Incidents </button></td>
+
  		 </tr>
-  		<tr onclick="resultsRowToLink()">
-    		<td>Jerome Finnigan</td>
-    		<td>5167</td>
-    		<td>January 1, 2011</td>
-    		<td>123 Main St., Chicago</td>
+  		<tr>
+    		<td>Nenad Markovich</td>
+    		<td>19638</td>
     		<td>White</td>
     		<td>Male</td>
-    		<td>No Action Taken</td>
-    		<td>27</td>
+    		<td><button> View Incidents </button></td>
+
  		 </tr>
  		 <tr>
-    		<td>Keith Herrera</td>
-    		<td>17289</td>
-    		<td>June 30, 2005</td>
-    		<td>712 Pine St., Chicago</td>
+    		<td>Adam Zelitsky</td>
+    		<td>2381</td>
     		<td>White/Hispanic</td>
     		<td>Male</td>
-    		<td>No Action Taken</td>
-    		<td>14</td>
+    		<td><button> View Incidents </button></td>
+
  		 </tr>
  		 <tr>
-    		<td>Sean Campbell</td>
+    		<td>Alma Price</td>
     		<td>5673</td>
-    		<td>August 12, 2014</td>
-    		<td>2099 Michigan Ave., Chicago</td>
-    		<td>White</td>
-    		<td>Male</td>
-    		<td>Unknown</td>
-    		<td>41</td>
+    		<td>Black</td>
+    		<td>Female</td>
+    		<td><button> View Incidents </button></td>
+
  		 </tr>
 	</table>
 
@@ -133,5 +124,83 @@
 <script>
 function resultsRowToLink() {
 	location.href="result_expanded.html";
+}
+
+function sortTable(n) {
+	var table, rows, switching, i, x, y, shouldSwitch, dir, switchcount = 0;
+	table = document.getElementById("initial_results");
+	switching = true;
+	dir = "ascending" // set sort direction
+	while (switching) {
+		switching = false;
+		rows = table.getElementsByTagName("TR");
+		for (i = 1; i < (rows.length - 1); i++) { // loop through table rows
+			shouldSwitch = false;
+			x = rows[i].getElementsByTagName("TD")[n];      // compare item in row
+			y = rows[i + 1].getElementsByTagName("TD")[n];  // and item in next row
+			
+			if (dir == "ascending") {
+				if (x.innerHTML.toLowerCase() > y.innerHTML.toLowerCase()) {
+					shouldSwitch = true;  // if lower item larger, mark to switch
+					break;				  // and break loop
+				}
+			} else if (dir == "descending") {
+				if (x.innerHTML.toLowerCase() < y.innerHTML.toLowerCase()) {
+					shouldSwitch = true;
+					break;
+				}
+			}
+		}
+		if (shouldSwitch) {
+			rows[i].parentNode.insertBefore(rows[i+1], rows[i]);
+			switching = true;
+			switchcount++;
+		} else {
+			if (switchcount == 0 && dir == "ascending") {
+				dir = "descending";
+				switching = true;
+			}
+		}
+	}
+	
+}
+
+function sortTableNum(n) {
+	var table, rows, switching, i, x, y, shouldSwitch, dir, switchcount = 0;
+	table = document.getElementById("initial_results");
+	switching = true;
+	dir = "ascending" // set sort direction
+	while (switching) {
+		switching = false;
+		rows = table.getElementsByTagName("TR");
+		for (i = 1; i < (rows.length - 1); i++) { // loop through table rows
+			shouldSwitch = false;
+			x = rows[i].getElementsByTagName("TD")[n];      // compare item in row
+			y = rows[i + 1].getElementsByTagName("TD")[n];  // and item in next row
+			
+			if (dir == "ascending") {
+				if (Number(x.innerHTML) > Number(y.innerHTML)) {
+					shouldSwitch = true;  // if lower item larger, mark to switch
+					break;				  // and break loop
+				}
+			} else if (dir == "descending") {
+				if (Number(x.innerHTML) < Number(y.innerHTML)) {
+					shouldSwitch = true;
+					break;
+				}
+			}
+		}
+		if (shouldSwitch) {
+			rows[i].parentNode.insertBefore(rows[i+1], rows[i]);
+			switching = true;
+			switchcount++;
+		} else {
+			if (switchcount == 0 && dir == "ascending") {
+				dir = "descending";
+				switching = true;
+			}
+		}
+	}
+	
 }
 </script>
