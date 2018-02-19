@@ -179,6 +179,7 @@ function ParseChar(sStr, sChar) {
 }
 
 function submitForm() {
+	console.log("hi")
 	window.location.replace("FoIA_page_success.html")
 }
 
