@@ -383,12 +383,19 @@ a.search_button {
 	border-collapse: collapse;
 }
 
-#initial_results td, #initial_results th {
+#initial_results td {
+	border: 1px solid black;
+	padding: 5px;
+	cursor: pointer;
+}
+
+#initial_results th {
 	border: 1px solid black;
 	padding: 5px;
 }
 
 #initial_results tr:nth-child(even) {background-color: #f2f2f2;}
+#initial_results tr:nth-child(odd) {background-color: #e2e2e2;}
 #initial_results tr:hover {background-color: #ddd;}
 
 #initial_results th {
@@ -404,8 +411,6 @@ a.search_button {
 .result-information {
 	padding-left: 25px;
 }
-
-
 
 
 
