@@ -407,8 +407,26 @@ a.search_button {
 	color: white;
 }
 
+#back-text {
+	color: white;
+	text-align: center;
+}
+
 .back-to-results {
-	padding-top: 10px;
+	text-decoration: none;
+	font-weight: bold;
+	font-size: 80%;
+    background-color: #157E8A;
+	padding: 5 8 5 8;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+	display: inline;
+}
+
+.back-to-results:hover {
+    background-color: #0AD1FB;
+	
 }
 
 .result-information {
