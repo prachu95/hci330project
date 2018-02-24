@@ -291,6 +291,7 @@ textarea {
 
 .search_region{
 	display: inline-block;
+	
 }
 
 
@@ -375,9 +376,15 @@ a.search_button {
 
 */
 
+.search-title {
+	width: 90%;
+	margin: auto;
+}
+
 .results_table {
 	width: 90%;
-	padding-left: 25px;
+	margin-left: auto;
+	margin-right: auto;
 }
 
 #initial_results {
