@@ -46,18 +46,17 @@
 	<table class="results_table" id="initial_results">
 		<tr>
 			<!--Table is sorted when header (icon?) is clicked -->  
-    		<th onclick="sortTable(0)">Name <span class="fa fa-fw fa-sort">
-    			</span></th> <!-- Do we want to separate first name and last name into 2 fields? -->
-   		 	<th onclick="sortTableNum(1)">Badge # <span class="fa fa-fw fa-sort">
-   		 		</span></th>
-    		<th onclick="sortTable(2)">Race <span class="fa fa-fw fa-sort">
-    			</span></th>
-    		<th onclick="sortTable(3)">Sex <span class="fa fa-fw fa-sort">
-    			</span></th>
-    		<th> 
-    			</span></th>
+    		<th onclick="sortTable(0)">Name <i class="button fa fa-fw fa-sort">
+    			</i></th> <!-- Do we want to separate first name and last name into 2 fields? -->
+   		 	<th onclick="sortTableNum(1)">Badge # <i class="fa fa-fw fa-sort">
+   		 		</i></th>
+    		<th onclick="sortTable(2)">Race <i class="fa fa-fw fa-sort">
+    			</i></th>
+    		<th onclick="sortTable(3)">Sex <i class="fa fa-fw fa-sort">
+    			</i></th>
+    		<th> </th>
   		</tr>
-  		<tr onclick="resultsRowToLink()">
+  		<tr onclick="resultsRowToLink(0)">
     		<td>Jerome Finnigan</td>
     		<td>5167</td>
     		<td>White</td>
@@ -65,7 +64,7 @@
     		<td><button> View Record </button></td>
 
  		 </tr>
- 		 <tr>
+ 		 <tr onclick="resultsRowToLink(0)">
     		<td>Keith Herrera</td>
     		<td>17289</td>
     		<td>White/Hispanic</td>
@@ -73,7 +72,7 @@
     		<td><button> View Record </button></td>
 
  		 </tr>
- 		 <tr>
+ 		 <tr onclick="resultsRowToLink(0)">
     		<td>Sean Campbell</td>
     		<td>5673</td>
     		<td>White</td>
@@ -81,7 +80,7 @@
     		<td><button> View Record </button></td>
 
  		 </tr>
-  		<tr>
+  		<tr onclick="resultsRowToLink(0)">
     		<td>Nenad Markovich</td>
     		<td>19638</td>
     		<td>White</td>
@@ -89,7 +88,7 @@
     		<td><button> View Record </button></td>
 
  		 </tr>
- 		 <tr>
+ 		 <tr onclick="resultsRowToLink(0)">
     		<td>Adam Zelitsky</td>
     		<td>2381</td>
     		<td>White/Hispanic</td>
@@ -97,7 +96,7 @@
     		<td><button> View Record </button></td>
 
  		 </tr>
- 		 <tr>
+ 		 <tr onclick="resultsRowToLink(0)">
     		<td>Alma Price</td>
     		<td>5673</td>
     		<td>Black</td>
@@ -108,6 +107,7 @@
 	</table>
 
 </div>
+
 
 <div class="footer-wrapper">
   <div class="footer-text">
@@ -121,9 +121,15 @@
 
 
 <script>
-function resultsRowToLink() {
-	location.href="result_expanded.html";
+function resultsRowToLink(num) {
+	if (num == 0) {
+		location.href="result_expanded.html";
+	}
+	if (num == 1) {
+		location.href="incident_description.html";
+	}
 }
+
 
 function sortTable(n) {
 	var table, rows, switching, i, x, y, shouldSwitch, dir, switchcount = 0;

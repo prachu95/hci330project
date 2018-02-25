@@ -1,0 +1,201 @@
+<html>
+    <head>
+	    <title>Record</title>
+        <link rel="stylesheet" type="text/css" href="common.css"/>
+		<link rel="icon" href="image\favicon-16x16.png">
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    </head>
+    <body>
+
+<!-- NAV BAR -->
+<div class="topnav">
+	<div id="home_nav">
+		 <a href="home_page.html" style="font-size: 20"><img src="image\logo.png" style="width:20px;height:20px;" alt="Home">
+		 <strong>&nbsp;&nbsp;Project Aequitas</strong></div>
+	<a style="background-color: #DC0028" href="search_page.html">Records</a>
+	<a href="stats.html">Statistic</a>
+	<a href="FoIA_page.html">FoIA</a>
+</div>
+
+<div style="padding-top: 20; padding-left: 25; padding-bottom: 25;">
+<div class="back-to-results">
+	<a id="back-text" href="result_expanded.html">
+		<i class="fa fa-arrow-left">&nbsp;Back to Officer Page</i>
+	</a>
+</div>
+</div>
+
+
+
+<div class="result-title">
+    <div class="info-head">
+		<h1>Jerome Finnigan</h1>
+		<div class="subinfo">
+			<p> Badge # 5167</p>
+			<p> White Male</p>
+		</div>
+    </div>
+</div>
+
+
+<!-- RESULT INFORMATION -->
+
+<div class="incidents-table">
+	<table class="incidents-table" id="incident-results" style="overflow-y:auto;">
+		<tr>
+			<!--Table is sorted when header (icon?) is clicked -->  
+    		<th onclick="sortTable(0)">Location <span class="fa fa-fw fa-sort">
+    			</span></th>
+   		 	<th onclick="sortTable(1)">Date <span class="fa fa-fw fa-sort">
+   		 		</span></th>
+    		<th onclick="sortTable(2)">Outcome <span class="fa fa-fw fa-sort">
+    			</span></th>
+    		<th> 
+    			</span></th>
+  		</tr>
+  		<tr onclick="resultsRowToLink(1)">
+    		<td>123 Main St., Chicago</td>
+    		<td>1/1/2011</td>
+    		<td>No action taken</td>
+    		<td><button> View Record </button></td>
+
+ 		 </tr>
+ 		 <tr onclick="resultsRowToLink(1)">
+    		<td>1901 Foster Ave., Evanston</td>
+    		<td>10/8/2002</td>
+    		<td>No action taken</td>
+    		<td><button> View Record </button></td>
+ 		 </tr>
+ 		 <tr onclick="resultsRowToLink(1)">
+    		<td>3133 Chicago Ave., Chicago</td>
+    		<td>2/20/2012</td>
+    		<td>No action taken</td>
+    		<td><button> View Record </button></td>
+ 		 </tr>
+  		<tr onclick="resultsRowToLink(1)">
+    		<td>456 Main St., Chicago</td>
+    		<td>7/16/2007</td>
+    		<td>Suspended</td>
+    		<td><button> View Record </button></td>
+ 		 </tr>
+ 		 <tr onclick="resultsRowToLink(1)">
+    		<td>801 Main St., Chicago</td>
+    		<td>4/6/2011</td>
+    		<td>No action taken</td>
+    		<td><button> View Record </button></td>
+ 		 </tr>
+ 		 <tr onclick="resultsRowToLink(1)">
+    		<td>1011 Pine Ave., Chicago</td>
+    		<td>6/4/2008</td>
+    		<td>No action taken</td>
+    		<td><button> View Record </button></td>
+ 		 </tr>
+ 		  <tr onclick="resultsRowToLink(1)">
+    		<td>123 Second St., Chicago</td>
+    		<td>4/11/2003</td>
+    		<td>No action taken</td>
+    		<td><button> View Record </button></td>
+ 		 </tr>
+ 		 <tr onclick="resultsRowToLink(1)">
+    		<td>999 Michigan Ave., Chicago</td>
+    		<td>12/1/2000</td>
+    		<td>Suspended</td>
+    		<td><button> View Record </button></td>
+ 		 </tr>
+ 
+	</table>
+</div>
+
+
+<div class="comment-section">
+	<h4>Comments:</h4>
+	<div class="comment">
+		<p id="username">Bruce Wayne:</p>
+		<p id="comment-text">This officer was searched me without probably cause at the mall last year!</p>
+	</div>
+	<div class="comment">
+		<p id="username">Peter Parker:</p>
+		<p id="comment-text">One day I was coming home from work and I was stopped by this cop. He kept me waiting for
+		two hours!</p>
+	</div>
+	<div class="comment">
+		<p id="submitted-username"></p>
+		<p id="submitted-comment-text"></p>
+	</div>
+	<div class="add-comment" id="new-comment-area">
+		Display Name:
+		<input id="new-user" type="text"></input>
+		Your Message:
+		<textarea id="new-comment">Share your experience...</textarea>
+		<button class="submit-comment" onClick="submitComment();">Submit</button>
+	</div>
+</div>
+
+<div class="bottom-space"></div>
+
+<div class="footer-wrapper">
+  <div class="footer-text">
+	<p style="font-size: 13;"><b>© Copyright 2018 Project Veritas. All rights reserved.</b></p>
+    <p style="font-size: 10;">Contact: <a href="" style="color:#f2f2f2;">info@veritas.org</a></p>
+    <!-- <p>Kashish Goyal, Spensor Simon, Cameron Roberts, Prashanth Tirupachur Vasanthakrishnan</p> -->
+  </div>
+</div>
+
+
+<script src="backend.js"></script>
+
+<script>
+
+function resultsRowToLink(num) {
+	if (num == 0) {
+		location.href="result_expanded.html";
+	}
+	if (num == 1) {
+		location.href="incident_description.html";
+	}
+}
+
+function sortTable(n) {
+	var table, rows, switching, i, x, y, shouldSwitch, dir, switchcount = 0;
+	table = document.getElementById("incident-results");
+	switching = true;
+	dir = "ascending" // set sort direction
+	while (switching) {
+		switching = false;
+		rows = table.getElementsByTagName("TR");
+		for (i = 1; i < (rows.length - 1); i++) { // loop through table rows
+			shouldSwitch = false;
+			x = rows[i].getElementsByTagName("TD")[n];      // compare item in row
+			y = rows[i + 1].getElementsByTagName("TD")[n];  // and item in next row
+			
+			if (dir == "ascending") {
+				if (x.innerHTML.toLowerCase() > y.innerHTML.toLowerCase()) {
+					shouldSwitch = true;  // if lower item larger, mark to switch
+					break;				  // and break loop
+				}
+			} else if (dir == "descending") {
+				if (x.innerHTML.toLowerCase() < y.innerHTML.toLowerCase()) {
+					shouldSwitch = true;
+					break;
+				}
+			}
+		}
+		if (shouldSwitch) {
+			rows[i].parentNode.insertBefore(rows[i+1], rows[i]);
+			switching = true;
+			switchcount++;
+		} else {
+			if (switchcount == 0 && dir == "ascending") {
+				dir = "descending";
+				switching = true;
+			}
+		}
+	}
+	
+}
+
+</script>
+</body>
+</html>
+
