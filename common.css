@@ -145,7 +145,6 @@ body {
 	width: 275;
 	height: 150;
 	color: white;
-	
 	box-shadow: 0 0 4px #ccc;
 	border-radius: 5px;
     background-color: #0AD1FB;
@@ -296,11 +295,10 @@ textarea {
 
 
 #search_box_entry{
-
 	float: left;
 	width: 225px;
 	margin: 25px;
-  height: 50px;
+	height: 50px;
 }
 
 
@@ -436,16 +434,19 @@ a.search_button {
 	
 }
 
-.result-information {
-	padding-left: 25px;
+.result-title {
+	padding-left: 40px;
 	width: 50%;
 }
 
-.result-information h1 {
+
+
+.result-title h1 {
 	color: #157E8A;
 	letter-spacing: 1px;
 	text-transform: uppercase;
 	line-height: 0.5;
+	
 }
 
 
@@ -454,9 +455,42 @@ a.search_button {
 	line-height: 0.3;
 }
 
-.result-incidents {
+.total-incidents {
 	padding-top: 15px;
 	padding-bottom: 10px;
+}
+
+.result-incidents {
+	display: inline-block;
+	float: left;
+	margin: 2.5%;
+	line-height: 1;
+	padding-left: 15px;
+	width: 40%;
+	padding-bottom: 20px;
+	box-shadow: 0 0 4px #ccc;
+	border-radius: 5px;
+    background-color: #f2f2f2;
+    opacity: 0.9;
+}
+
+.comment-section {
+	display: inline-block;
+	float: right;
+	margin: 2.5%;
+	line-height: 1;
+	padding-left: 15px;
+	padding-right: 15;
+	width: 40%;
+	padding-bottom: 20px;
+	box-shadow: 0 0 4px #ccc;
+	border-radius: 5px;
+    background-color: #f2f2f2;
+    opacity: 0.9;
+}
+
+.comment {
+	
 }
 
 .view_incidents_button {

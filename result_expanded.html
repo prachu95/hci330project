@@ -28,7 +28,7 @@
 
 
 
-<div class="result-information">
+<div class="result-title">
     <div class="info-head">
 		<h1>Jerome Finnigan</h1>
 		<div class="subinfo">
@@ -36,10 +36,16 @@
 			<p> White Male</p>
 		</div>
     </div>
+		<div class="total-incidents">
+		<p> 67 Incidents 
+			<a class="view_incidents_button" href="Incidents_results_page.html">View All</a>
+		</p>
+	</div>
 </div>
 
 
 <!-- SEARCH BAR -->
+<!--
 <div class="search_region">
   <input type="text" id="search_box_entry" name="officername" placeholder="Search By: Officer Name"></input>
   <input type="text" id="search_box_entry" name="officerBadge" placeholder="Search By: Officer Badge"></input>
@@ -55,26 +61,34 @@
   <button> Search </button>
 </form>
 </div>
+-->
 
 <!-- RESULT INFORMATION -->
 
-<div class="result-information">
-	<div class="result-incidents">
-		<p> 67 Incidents 
-			<a class="view_incidents_button" href="Incidents_results_page.html">View All</a>
-		</p>
-	</div>
+<div class="result-incidents">
 	<div class="latest-incident">
 		<h4>Most Recent Incident:</h4>
-		<p>Location: 123 Main St., Chicago</p>
-		<p>Outcome: No action taken</p>
-		<p>Description: Here is a more in depth description of the event that took place. </p>
+		&nbsp;&nbsp;Location: 123 Main St., Chicago<br>
+		&nbsp;&nbsp;Outcome: No action taken<br>
+		&nbsp;&nbsp;Description: Here is a more in depth description of the event that took place. <br>
 	</div>
 </div>
 
 
-<div class="comments">
-
+<div class="comment-section">
+	<h4>Comments:</h4>
+	<div class="comment">
+		<p id="username">Bruce Wayne:</p>
+		<p id="comment-text">This officer was searched me without probably cause at the mall last year!</p>
+	</div>
+	<div class="comment">
+		<p id="username">Peter Parker:</p>
+		<p id="comment-text">One day I was coming home from work and I was stopped by this cop. He kept me waiting for
+		two hours!</p>
+	</div>
+	<div class="add-comment">
+	
+	</div>
 </div>
 
 <div class="footer-wrapper">
