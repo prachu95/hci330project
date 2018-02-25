@@ -474,6 +474,10 @@ a.search_button {
     opacity: 0.9;
 }
 
+.result-incidents h4 {
+	font-size: 20;
+}
+
 .comment-section {
 	display: inline-block;
 	float: right;
@@ -489,8 +493,52 @@ a.search_button {
     opacity: 0.9;
 }
 
+.comment-section h4 {
+	font-size: 20;
+}
+
+#username {
+	display: inline;
+	font-weight: bold;
+}
+
+#comment-text {
+	display:inline;
+}
+
+#submitted-username {
+	display: inline;
+	font-weight: bold;
+}
+
+#submitted-comment-text {
+	display:inline;
+}
+
 .comment {
-	
+	display: block;
+	padding-bottom: 10;
+	padding-left: 10;
+}
+
+.add-comment {
+	padding-top: 20;
+}
+
+.submit-comment {
+	text-decoration: none;
+	color: white;
+	font-weight: bold;
+    background-color: #157E8A;
+	padding: 5 8 5 8;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+	text-align: center;
+}
+
+.submit-comment:hover {
+	background-color: #0AD1FB;
 }
 
 .view_incidents_button {

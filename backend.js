@@ -179,8 +179,8 @@ function ParseChar(sStr, sChar) {
 }
 
 function submitForm() {
-	console.log("hi")
-	window.location.replace("FoIA_page_success.html")
+	console.log("hi");
+	window.location.replace("FoIA_page_success.html");
 }
 
 /*
@@ -198,6 +198,24 @@ home_page.html js elements.
     result_page.html js elements.
 
 */
+
+function submitComment() {
+	if (document.getElementById("new-user").value != "") {
+		if (document.getElementById("new-comment").value != "Share your experience...") {
+			document.getElementById("submitted-username").innerHTML = document.getElementById("new-user").value + ": ";
+			document.getElementById("submitted-comment-text").innerHTML = document.getElementById("new-comment").value;
+			
+			document.getElementById("new-comment-area").remove();
+
+		}
+		else {
+			alert("Please enter a comment.")
+		}
+	}
+	else {
+		alert("Please enter a name to display. This can be either your real name or an alias.")
+	}
+}
 
 
 
