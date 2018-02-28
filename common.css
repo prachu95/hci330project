@@ -627,21 +627,35 @@ a.search_button {
 }
 
 .visualization {
-	width: 40%;
+/*	width: 40%;
 	height: 250;
 	margin-left: auto;
 	margin-right: auto;
 	float: left;
 	padding-left: 50;
-}
+*/}
 
 .visualization-text {
-	padding-top: 50;
+/*	padding-top: 50;
 	height: 250;
 	margin-left: auto;
 	margin-right: auto;
-	text-align: justify;
-	width: 40%;
-	float: right;
-	padding-right: 50;
+*/	/*text-align: justify;*/
+	/*width: 40%;*/
+	/*float: right;*/
+	/*padding-right: 50;*/
+}
+.chart{
+  display: inline-block;
+  width: 100%;
+  margin-left: auto;
+  /*background-color: grey;*/
+}
+
+.chart-text{
+  display: inline-block;
+  width: 50%;
+  float: right;
+  margin-top: 30px;
+
 }
