@@ -6,6 +6,7 @@ google.charts.load('current', {'packages':['corechart']});
 google.charts.setOnLoadCallback(demographies);
 google.charts.setOnLoadCallback(categories);
 google.charts.setOnLoadCallback(district);
+google.charts.setOnLoadCallback(raceOfOfficers);
 
 // Callback that creates and populates a data table,
 // instantiates the pie chart, passes in the data and
@@ -248,13 +249,50 @@ function district() {
 
   // Set chart options
 
-  // data from the file name : complainants.csv
+  // data from the file name : complaints.csv
   var options = {'title':'District-wise complaints registered',
                  'width':700,
                  'height': 300};
 
   // Instantiate and draw our chart, passing in some options.
   var chart = new google.visualization.ColumnChart(document.getElementById('district'));
+
+  function selectHandler() {
+    var selectedItem = chart.getSelection()[0];
+    if (selectedItem) {
+      var topping = data.getValue(selectedItem.row, 0);
+      alert('The user selected ' + topping);
+    }
+  }
+
+  google.visualization.events.addListener(chart, 'select', selectHandler);    
+  chart.draw(data, options);
+}
+
+
+function raceOfOfficers() {
+
+  // Create the data table.
+  var data = new google.visualization.DataTable();
+  data.addColumn('string', 'Topping');
+  data.addColumn('number', 'Slices');
+  data.addRows([
+['ASIAN/PACIFIC ISLANDER',2605],
+['BLACK',30980],
+['HISPANIC',23824],
+['WHITE',67743],
+
+  ]);
+
+  // Set chart options
+
+  // data from the file name : complaints.csv
+  var options = {'title':'Race distribution among accused personnel',
+                 'width':700,
+                 'height': 300};
+
+  // Instantiate and draw our chart, passing in some options.
+  var chart = new google.visualization.ColumnChart(document.getElementById('raceOfOfficers'));
 
   function selectHandler() {
     var selectedItem = chart.getSelection()[0];
