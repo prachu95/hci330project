@@ -185,7 +185,7 @@ function categories() {
   // Set chart options
 
   // data from the file name : complaints.csv
-  var options = {'title':'Distribution of Complaints based on Race',
+  var options = {'title':'No. of Complaints based on Categories',
                  'width':700,
                  'height': 300};
 
