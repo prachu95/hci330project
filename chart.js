@@ -5,6 +5,7 @@ google.charts.load('current', {'packages':['corechart']});
 // Set a callback to run when the Google Visualization API is loaded.
 google.charts.setOnLoadCallback(demographies);
 google.charts.setOnLoadCallback(categories);
+google.charts.setOnLoadCallback(district);
 
 // Callback that creates and populates a data table,
 // instantiates the pie chart, passes in the data and
@@ -28,7 +29,7 @@ function demographies() {
 
   // Set chart options
 
-  // data from the file name : complaints.csv
+  // data from the file name : complainants.csv
   var options = {'title':'Distribution of Complaints based on Race',
                  'width':700,
                  'height': 300};
@@ -47,6 +48,14 @@ function demographies() {
   google.visualization.events.addListener(chart, 'select', selectHandler);    
   chart.draw(data, options);
 }
+
+
+
+
+
+
+
+
 
 
 function categories() {
@@ -184,13 +193,68 @@ function categories() {
 
   // Set chart options
 
-  // data from the file name : complaints.csv
+  // data from the file name : accused.csv
   var options = {'title':'No. of Complaints based on Categories',
                  'width':700,
                  'height': 300};
 
   // Instantiate and draw our chart, passing in some options.
   var chart = new google.visualization.ColumnChart(document.getElementById('categories'));
+
+  function selectHandler() {
+    var selectedItem = chart.getSelection()[0];
+    if (selectedItem) {
+      var topping = data.getValue(selectedItem.row, 0);
+      alert('The user selected ' + topping);
+    }
+  }
+
+  google.visualization.events.addListener(chart, 'select', selectHandler);    
+  chart.draw(data, options);
+}
+
+
+
+
+function district() {
+
+  // Create the data table.
+  var data = new google.visualization.DataTable();
+  data.addColumn('string', 'Topping');
+  data.addColumn('number', 'Slices');
+  data.addRows([
+                ['District 1',92],
+                ['District 2',62],
+                ['District 3',153],
+                ['District 4',908],
+                ['District 5',161],
+                ['District 6',7],
+                ['District 7',3],
+                ['District 8',121],
+                ['District 9',98],
+                ['District 10',34],
+                ['District 11',36],
+                ['District 12',65],
+                ['District 13',37],
+                ['District 14',288],
+                ['District 15',241],
+                ['District 16',30],
+                ['District 17',3980],
+                ['District 18',8],
+                ['District 19',1568],
+                ['District 20',26],
+
+  ]);
+
+  // Set chart options
+
+  // data from the file name : complainants.csv
+  var options = {'title':'District-wise complaints registered',
+                 'width':700,
+                 'height': 300};
+
+  // Instantiate and draw our chart, passing in some options.
+  var chart = new google.visualization.ColumnChart(document.getElementById('district'));
 
   function selectHandler() {
     var selectedItem = chart.getSelection()[0];
