@@ -17,7 +17,7 @@ function demographies() {
   // Create the data table.
   var data = new google.visualization.DataTable();
   data.addColumn('string', 'Topping');
-  data.addColumn('number', 'Slices');
+  data.addColumn('number', 'Count');
   data.addRows([
     ['AMER IND/ALASKAN NATIVE', 38],
     ['ASIAN/PACIFIC ISLANDER', 427],
@@ -65,7 +65,7 @@ function categories() {
   // Create the data table.
   var data = new google.visualization.DataTable();
   data.addColumn('string', 'Topping');
-  data.addColumn('number', 'Slices');
+  data.addColumn('number', 'Count');
   data.addRows([
   ['01A-USE OF PROFANITY', 3157],
   ['01B-RACIAL/ETHNIC, ETC.', 1206],
@@ -223,7 +223,7 @@ function district() {
   // Create the data table.
   var data = new google.visualization.DataTable();
   data.addColumn('string', 'Topping');
-  data.addColumn('number', 'Slices');
+  data.addColumn('number', 'Count');
   data.addRows([
                 ['District 1',92],
                 ['District 2',62],
@@ -276,7 +276,7 @@ function raceOfOfficers() {
   // Create the data table.
   var data = new google.visualization.DataTable();
   data.addColumn('string', 'Topping');
-  data.addColumn('number', 'Slices');
+  data.addColumn('number', 'Count');
   data.addRows([
 ['ASIAN/PACIFIC ISLANDER',2605],
 ['BLACK',30980],
@@ -363,7 +363,7 @@ function penalty() {
                };
 
   // Instantiate and draw our chart, passing in some options.
-  var chart = NEIGHBORw google.visualization.PieChart(document.getElementById('penalty'));
+  var chart = new google.visualization.PieChart(document.getElementById('penalty'));
 
   function selectHandler() {
     var selectedItem = chart.getSelection()[0];
