@@ -7,6 +7,7 @@ google.charts.setOnLoadCallback(demographies);
 google.charts.setOnLoadCallback(categories);
 google.charts.setOnLoadCallback(district);
 google.charts.setOnLoadCallback(raceOfOfficers);
+google.charts.setOnLoadCallback(penalty);
 
 // Callback that creates and populates a data table,
 // instantiates the pie chart, passes in the data and
@@ -286,7 +287,7 @@ function raceOfOfficers() {
 
   // Set chart options
 
-  // data from the file name : complaints.csv
+  // data from the file name : accused.csv
   var options = {'title':'Race distribution among accused personnel',
                  'width':700,
                  'height': 300};
@@ -305,3 +306,74 @@ function raceOfOfficers() {
   google.visualization.events.addListener(chart, 'select', selectHandler);    
   chart.draw(data, options);
 }
+
+
+function penalty() {
+
+  // Create the data table.
+  var data = new google.visualization.DataTable();
+  data.addColumn('string', 'Topping');
+  data.addColumn('number', 'Slices');
+  data.addRows([
+['VIOLATION NOTED',831],
+['1 DAY SUSPENSION',1478],
+['2 DAY SUSPENSION',608],
+['3 DAY SUSPENSION',483],
+['4 DAY SUSPENSION',64],
+['5 DAY SUSPENSION',450],
+['6 DAY SUSPENSION',20],
+['7 DAY SUSPENSION',59],
+['8 DAY SUSPENSION',9],
+['9 DAY SUSPENSION',1],
+['10 DAY SUSPENSION',219],
+['11 DAY SUSPENSION',1],
+['12 DAY SUSPENSION',11],
+['13 DAY SUSPENSION',3],
+['14 DAY SUSPENSION',2],
+['15 DAY SUSPENSION',165],
+['16 DAY SUSPENSION',6],
+['17 DAY SUSPENSION',1],
+['20 DAY SUSPENSION',92],
+['21 DAY SUSPENSION',2],
+['22 DAY SUSPENSION',1],
+['23 DAY SUSPENSION',1],
+['24 DAY SUSPENSION',1],
+['25 DAY SUSPENSION',46],
+['27 DAY SUSPENSION',1],
+['28 DAY SUSPENSION',2],
+['30 DAY SUSPENSION',193],
+['REPRIMAND',2178],
+['SUSPENDED OVER 30 DAYS',64],
+['ADMINISTRATIVE TERMINATION',58],
+['SEPARATION',137],
+['REINSTATED BY POLICE BOARD',23],
+['NO ACTION TAKEN',109722],
+['REINSTATED BY COURT ACTION',11],
+['RESIGNED - NOT SERVED',644],
+['PENALTY NOT SERVED',283],
+
+  ]);
+
+  // Set chart options
+
+  // data from the file name : accused.csv
+  var options = {'title':'Race distribution among accused personnel',
+                 'width':700,
+                 'height': 300
+               };
+
+  // Instantiate and draw our chart, passing in some options.
+  var chart = NEIGHBORw google.visualization.PieChart(document.getElementById('penalty'));
+
+  function selectHandler() {
+    var selectedItem = chart.getSelection()[0];
+    if (selectedItem) {
+      var topping = data.getValue(selectedItem.row, 0);
+      alert('The user selected ' + topping);
+    }
+  }
+
+  google.visualization.events.addListener(chart, 'select', selectHandler);    
+  chart.draw(data, options);
+}
+
