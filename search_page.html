@@ -4,6 +4,12 @@
         <link rel="stylesheet" type="text/css" href="common.css"/>
 		<link rel="icon" href="image\favicon-16x16.png">
     <script src="backend.js"></script>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
     </head>
     <body>
 
@@ -26,21 +32,21 @@
 <div class="search_region">
   <input type="text" id="search_box_entry" name="officername" placeholder="Search By: Officer Name"></input>
   <input type="text" id="search_box_entry" name="officerBadge" placeholder="Search By: Officer Badge"></input>
-<form  id="drop_down" action="">
-  <select name="searh_options">
-    <option value="search" selected>Search By: </option>
-    <option value="saab">Incident Date</option>
-    <option value="fiat">Outcome</option>
-    <option value="audi">Comments</option>
-      <option value="audi">Other Details</option>
-  </select>
-  <button>Add</button>
-  <button class="search_button">
-  <a href="results_page.html">
-   Search
-  </a>
-  </button>
-</form>
+  <div class="btn-group" id="add_and_search">
+      <button type="button" class="">Add - Search By :</button>
+      <button type="button" class=" dropdown-toggle dropdown-toggle-split" data-toggle="dropdown">
+        <span class="caret"></span>
+      </button>
+      <div class="dropdown-menu">
+        <a class="dropdown-item" href="#">Incident Date</a>
+        <a class="dropdown-item" href="#">Outcome</a>
+        <a class="dropdown-item" href="#">Comments</a>
+        <a class="dropdown-item" href="#">Other Details</a>
+      </div>
+    </div>
+    <a href="results_page.html">
+      <button class="search_button" id="add_and_search">Search</button>
+    </a>
 </div>
 
 
@@ -64,27 +70,14 @@
 
 
 
+
 <!-- *Search Region. Will dynamically expand when the user wants to add more
      * search fields.
 
-** By Prashanth. This code is for seach_add button drop down menu.
-
-<div id="search_region">
-  <input type="text" id="search_box_entry" name="officername" placeholder="Search by Officer Name"></input>
-  <div class="dropdown">
-    <button onclick="addButton()" class="dropbtn">Add Field</button>
-      <div id="addDropdown" class="dropdown-content">
-        <a href="#badgeID">Search By: Badge ID</a>
-        <a href="#incidentDate">Search By:Incident Date</a>
-        <a href="#outcome">Search By: Outcome</a>
-        <a href="#comments">Search By: Comments</a>
-        <a href="#other">Search Using Other Details</a>
-      </div>
-  </div>
-</div>
+** By Prashanth. This code is for seach_add button drop down menu. -->
 
 
--->
+
 
 <div class="footer-wrapper">
   <div class="footer-text">
