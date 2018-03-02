@@ -591,14 +591,17 @@ textarea {
 }
 .chart{
   display: inline-block;
-  width: 100%;
+  float: left;
+  width: 40%;
   margin-left: auto;
   /*background-color: grey;*/
 }
 
 .chart-text{
   display: inline-block;
-  width: 50%;
+  text-align: justify;
+  padding-right: 60;
+  width: 40%;
   float: right;
   margin-top: 30px;
 
