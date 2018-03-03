@@ -30,11 +30,13 @@ function demographies() {
   ]);
 
   // Set chart options
+  
 
   // data from the file name : complainants.csv
-  var options = {'title':'Distribution of Complaints based on Race',
-                 'width':700,
-                 'height': 300};
+  var options = {'title':'Distribution of Complaints based on Race', 
+				'backgroundColor': 'transparent',
+                'width':700,
+                'height': 300};
 
   // Instantiate and draw our chart, passing in some options.
   var chart = new google.visualization.PieChart(document.getElementById('demographies'));
@@ -66,6 +68,7 @@ function categories() {
   var data = new google.visualization.DataTable();
   data.addColumn('string', 'Topping');
   data.addColumn('number', 'Count');
+
   data.addRows([
 ['01A-USE OF PROFANITY', 3157],
 ['01B-RACIAL/ETHNIC, ETC.', 1206],
@@ -105,9 +108,12 @@ function categories() {
   // Set chart options
 
   // data from the file name : accused.csv
-  var options = {'title':'No. of Complaints based on Categories',
-                 'width':700,
-                 'height': 300};
+  var options = {'title':'No. of Complaints based on Categories', 
+				'legend': 'none',
+				'colors':['#157E8A'],
+				'backgroundColor': 'transparent',
+                'width':700,
+                'height': 300};
 
   // Instantiate and draw our chart, passing in some options.
   var chart = new google.visualization.ColumnChart(document.getElementById('categories'));
@@ -161,8 +167,11 @@ function district() {
 
   // data from the file name : complaints.csv
   var options = {'title':'District-wise complaints registered',
-                 'width':700,
-                 'height': 300};
+				'legend': 'none',
+				'colors':['#157E8A'],
+				'backgroundColor': 'transparent',
+                'width':700,
+                'height': 300};
 
   // Instantiate and draw our chart, passing in some options.
   var chart = new google.visualization.ColumnChart(document.getElementById('district'));
@@ -198,8 +207,9 @@ function raceOfOfficers() {
 
   // data from the file name : accused.csv
   var options = {'title':'Race distribution among accused personnel',
-                 'width':700,
-                 'height': 300};
+				'backgroundColor': 'transparent',
+                'width':700,
+                'height': 300};
 
   // Instantiate and draw our chart, passing in some options.
   var chart = new google.visualization.PieChart(document.getElementById('raceOfOfficers'));

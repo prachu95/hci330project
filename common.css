@@ -554,13 +554,13 @@ textarea {
 
 .wrapper-even {
 	width: 100%;
-	height: 350;
+	height: 400;
 
 }
 
 .wrapper-odd {
 	width: 100%;
-	height: 350;
+	height: 400;
 	background-color: #f2f2f2;
     opacity: 0.9;
 }
