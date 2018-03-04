@@ -179,8 +179,16 @@ function ParseChar(sStr, sChar) {
 }
 
 function submitForm() {
-	console.log("hi");
-	window.location.replace("FoIA_page_success.html");
+	
+	if (document.getElementById('name').value != "" && document.getElementById('email').value != "" &&
+	 document.getElementById('address').value != "" && document.getElementById('bar').value != "" &&
+	 document.getElementById('oname').value != "" && document.getElementById('badgeID').value != ""
+	 ){
+		window.location.replace("FoIA_page_success.html");
+	}
+	else {
+		alert("Please enter both your information and the information of the officer")
+	}
 }
 
 /*
