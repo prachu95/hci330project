@@ -114,6 +114,8 @@ body {
 .title-text {
 	display: inline;
 	line-height: 100%;
+  text-shadow: 20px;
+  /*text-decoration-color: white;*/
 }
 
 .about {
@@ -121,11 +123,11 @@ body {
 	float: left;
 	width: 50%;
 	margin-left: 5%;
-	margin-top: 60;
-	box-shadow: 0 0 4px #ccc;
+	margin-top: 100;
+	box-shadow: 10px 10px 100px #333;
 	border-radius: 5px;
-    background-color: #f2f2f2;
-    opacity: 0.9;
+  background-color: #fff;
+  opacity: 0.9;
 }
 
 #about-text {
@@ -152,6 +154,7 @@ body {
 	margin-left: 10%;
 	line-height: 300%;
 	justify-content: space-between;
+  box-shadow: 20px 20px 50px #111;
 
 }
 
