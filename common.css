@@ -9,7 +9,7 @@ body {
 	position: relative;
 	font-family: Arial, Helvetica, sans-serif;
 	padding-bottom: 200;
-	background-image: url("image/chi.jpg");
+	/*background-image: url("image/chi.jpg");*/
 	background-repeat: no-repeat;
 	background-position: 50% 30%;
     background-size: 600px 400px;;
@@ -598,19 +598,20 @@ textarea {
 }
 
 .chart-text{
-  display: inline-block;
+  display: inline-flex;
   text-align: justify;
   padding-right: 60;
   width: 40%;
   float: right;
-  margin-top: 30px;
+  /*margin-top: auto;*/
+  /*vertical-align: middle;*/
 
 }
 
 
 .tile {
   width: 90%;
-  height: 500px;
+  height: 400px;
   margin: auto;
   margin-top: 50px;
   display: block;
