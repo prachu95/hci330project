@@ -152,7 +152,30 @@ body {
 	margin-left: 10%;
 	line-height: 300%;
 	justify-content: space-between;
+
 }
+
+#access_rec{
+	background-image: url("image/access_rec.png");
+	background-position: center;
+	background-size: 150px 150px;
+	text-decoration: none;
+}
+
+#view_stats{
+	background-image: url("image/view_stats.png");
+	background-position: center;
+	background-size: 150px 150px;
+	text-decoration: none;
+}
+
+#file_req{
+	background-image: url("image/file_req.png");
+	background-position: center;
+	background-size: 150px 150px;
+	text-decoration: none;
+}
+
 
 .buttons:hover {
 	font-weight: bold;
