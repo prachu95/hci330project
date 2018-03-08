@@ -229,6 +229,7 @@ function penalty() {
 
   // data from the file name : accused.csv
   var options = {'title':'Final Actions Taken against accused',
+  'backgroundColor': 'transparent',
                  'width':700,
                  'height': 300
                };
