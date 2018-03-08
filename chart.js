@@ -1,4 +1,3 @@
-
 // Load the Visualization API and the piechart package.
 google.charts.load('current', {'packages':['corechart']});
 
@@ -52,15 +51,6 @@ function demographies() {
   google.visualization.events.addListener(chart, 'select', selectHandler);    
   chart.draw(data, options);
 }
-
-
-
-
-
-
-
-
-
 
 function categories() {
 
@@ -222,7 +212,6 @@ function penalty() {
 ['NO ACTION TAKEN',109722],
 ['RESIGNED - NOT SERVED',644],
 ['PENALTY NOT SERVED',283],
-
   ]);
 
   // Set chart options
@@ -248,4 +237,3 @@ function penalty() {
   google.visualization.events.addListener(chart, 'select', selectHandler);    
   chart.draw(data, options);
 }
-
