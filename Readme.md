@@ -8,6 +8,6 @@ A web application to assist victims of police violence.
 Kashish Goyal <br>
 Cameron Roberts <br>
 Spenser Simon <br>
-Prashanth Tirupachur Vasanthakrishnan
-To view the website, visit: 
-https://prachu95.github.io/hci330project/ 
+Prashanth Tirupachur Vasanthakrishnan <br>
+<br>
+To view the website, visit: https://prachu95.github.io/hci330project/ 
