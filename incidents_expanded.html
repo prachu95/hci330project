@@ -44,14 +44,14 @@
 <div class="incidents-table">
 	<table class="incidents-table" id="incident-results" style="overflow-y:auto;">
 		<tr>
-			<!--Table is sorted when header (icon?) is clicked -->  
+			<!--Table is sorted when header (icon?) is clicked -->
     		<th onclick="sortTable(0)">Location <span class="fa fa-fw fa-sort">
     			</span></th>
    		 	<th onclick="sortTable(1)">Date <span class="fa fa-fw fa-sort">
    		 		</span></th>
     		<th onclick="sortTable(2)">Outcome <span class="fa fa-fw fa-sort">
     			</span></th>
-    		<th> 
+    		<th>
     			</span></th>
   		</tr>
   		<tr onclick="resultsRowToLink(1)">
@@ -103,7 +103,7 @@
     		<td>Suspended</td>
     		<td><button> View Record </button></td>
  		 </tr>
- 
+
 	</table>
 </div>
 
@@ -123,11 +123,11 @@
 		<p id="submitted-username"></p>
 		<p id="submitted-comment-text"></p>
 	</div>
-	<div class="add-comment" id="new-comment-area">
+  <div class="add-comment" id="new-comment-area">
 		Display Name:
-		<input id="new-user" type="text"></input>
-		Your Message:
-		<textarea id="new-comment">Share your experience...</textarea>
+		<input id="new-user" type="text" placeholder="Enter Your Name"></input>
+	Your Message:
+		<textarea id="new-comment"placeholder="Share your experience..." ></textarea>
 		<button class="submit-comment" onClick="submitComment();">Submit</button>
 	</div>
 </div>
@@ -168,7 +168,7 @@ function sortTable(n) {
 			shouldSwitch = false;
 			x = rows[i].getElementsByTagName("TD")[n];      // compare item in row
 			y = rows[i + 1].getElementsByTagName("TD")[n];  // and item in next row
-			
+
 			if (dir == "ascending") {
 				if (x.innerHTML.toLowerCase() > y.innerHTML.toLowerCase()) {
 					shouldSwitch = true;  // if lower item larger, mark to switch
@@ -192,10 +192,9 @@ function sortTable(n) {
 			}
 		}
 	}
-	
+
 }
 
 </script>
 </body>
 </html>
-
