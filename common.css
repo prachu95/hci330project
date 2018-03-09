@@ -37,6 +37,7 @@ body {
 .topnav {
 	overflow: hidden;
 	background-color: #333;
+	text-decoration: none;
 }
 
 .topnav a {
@@ -300,6 +301,7 @@ textarea {
 	line-height: 20px;
 	text-align: center;
 	font-size: 17px;
+	text-decoration: none;
 }
 
 #confirm_text {

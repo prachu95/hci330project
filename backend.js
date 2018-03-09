@@ -193,7 +193,7 @@ function submitForm() {
 
 /*
 
-home_page.html js elements.
+index.html js elements.
 
 */
 
