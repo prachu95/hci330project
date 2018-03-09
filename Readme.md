@@ -9,3 +9,5 @@ Kashish Goyal <br>
 Cameron Roberts <br>
 Spenser Simon <br>
 Prashanth Tirupachur Vasanthakrishnan
+To view the website, visit: 
+https://prachu95.github.io/hci330project/ 
