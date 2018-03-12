@@ -34,6 +34,11 @@ function demographies() {
   // data from the file name : complainants.csv
   var options = {'title':'Distribution of Complaints based on Race', 
 				'backgroundColor': 'transparent',
+                animation:{
+        "startup": true,
+        duration: 1000,
+        easing: 'out',
+      },
                 'width':700,
                 'height': 300};
 
@@ -79,6 +84,11 @@ function categories() {
 				'legend': 'none',
 				'colors':['#157E8A'],
 				'backgroundColor': 'transparent',
+        animation:{
+        startup: true,
+        duration: 1000,
+        easing: 'out',
+      },
                 'width':700,
                 'height': 300};
 
@@ -138,7 +148,12 @@ function district() {
 				'colors':['#157E8A'],
 				'backgroundColor': 'transparent',
                 'width':700,
-                'height': 300};
+                'height': 300,
+                      animation:{
+        startup: true,
+        duration: 1000,
+        easing: 'out',
+      }};
 
   // Instantiate and draw our chart, passing in some options.
   var chart = new google.visualization.BarChart(document.getElementById('district'));
@@ -175,8 +190,13 @@ function raceOfOfficers() {
   // data from the file name : accused.csv
   var options = {'title':'Race distribution among accused personnel',
 				'backgroundColor': 'transparent',
+                animation:{
+        startup: true,
+        duration: 1000,
+        easing: 'out',
+      },
                 'width':700,
-                'height': 300};
+                'height': 300,};
 
   // Instantiate and draw our chart, passing in some options.
   var chart = new google.visualization.PieChart(document.getElementById('raceOfOfficers'));
@@ -220,6 +240,11 @@ function penalty() {
   var options = {'title':'Final Actions Taken against accused',
   'backgroundColor': 'transparent',
                  'width':700,
+                         animation:{
+        startup: true,
+        duration: 1000,
+        easing: 'out',
+      },
                  'height': 300
                };
 
