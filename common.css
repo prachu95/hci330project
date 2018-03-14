@@ -293,7 +293,7 @@ textarea {
     width: 35%;
 	text-decoration: none;
 	font-weight: bold;
-    background-color: #157E8A;
+    background-color: #004d80;
     color: white;
     padding: 14px 120px;
     border: none;
@@ -320,6 +320,9 @@ textarea {
 	padding-top:  50;
 }
 
+#success_text{
+  text-align: center;
+}
 
 /*
 
