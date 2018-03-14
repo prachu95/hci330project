@@ -9,15 +9,12 @@ body {
 	position: relative;
 	font-family: Arial, Helvetica, sans-serif;
 	padding-bottom: 200;
-<<<<<<< HEAD
   background: linear-gradient(to bottom right, #033249, #0996dc);
-=======
 	background: linear-gradient(to bottom right, #033249, #0996dc);
 	/*background-repeat: no-repeat;*/
 	/*background-position: 50% 30%;*/
     /*background-size: 600px 400px;;*/
 
->>>>>>> 769212d54d28627c098284f0966d61eb6ce4884e
 }
 
 #page_title {
