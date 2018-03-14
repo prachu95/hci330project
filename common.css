@@ -63,6 +63,10 @@ body {
 	color: white;
 }
 
+#text_no_decoration{
+	text-decoration: none;
+}
+
 /*
 
 	footer styling
