@@ -6,17 +6,18 @@
 </head>
 <body>
 
-  <!-- NAV BAR -->
-  <div class="topnav">
-    <div id="home_nav">
-      <a href="index.html" style="font-size: 20"><img src="image\logo.png" style="width:20px;height:20px;" alt="Home">
-        <strong>&nbsp;&nbsp;Project Aequitas</strong></div>
-        <a href="search_page.html">Records</a>
-        <a href="stats.html">Statistic</a>
-        <a style="background-color: #DC0028" href="FoIA_page.html">FoIA</a>
-      </div>
-    <!-- page description -->
-      <h2 id="page_title" style="padding-left:100;">Filing a Request</h2>
+<!-- NAV BAR -->
+<div class="topnav">
+	<div id="home_nav">
+		<a href="index.html" id="home_button"><img id="home_image" src="image\logo.png" alt="Home">
+			<strong>&nbsp;&nbsp;Project Aequitas</strong></div>
+				<a href="search_page.html">Records</a>
+				<a href="stats.html">Statistic</a>
+				<a id="active_tab" href="FoIA_page.html">FoIA</a>
+</div>
+
+<!-- page description -->
+      <h2 id="page_title">Filing a Request</h2>
       <hr id="common_hr">
       <div class="FoIA_info">
         <p id="page_body">This form will submit a Freedom of Information Request to the City of Chicago
@@ -33,14 +34,15 @@
           <a class="submit_button" href="FoIA_page.html">File another request!</a>
         </div>
       </div>
+	  
 <!-- footer -->
-      <div class="footer-wrapper">
-        <div class="footer-text">
-          <p style="font-size: 13;"><b>© Copyright 2018 Project Aequitas. All rights reserved.</b></p>
-          <p style="font-size: 10;">Contact: <a href="" style="color:#f2f2f2;">info@Aequitas.org</a></p>
-        </div>
-      </div>
+<div class="footer-wrapper">
+	<div class="footer-text">
+		<p id="footp1"><b>© Copyright 2018 Project Aequitas. All rights reserved.</b></p>
+		<p id="footp2">Contact: <a id="email_link" href="">info@Aequitas.org</a></p>
+	</div>
+</div>
 
-      <script src="backend.js"></script>
+    <script src="backend.js"></script>
     </body>
     </html>
