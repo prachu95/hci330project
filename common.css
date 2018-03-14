@@ -423,10 +423,11 @@ textarea {
 
 
 .result-title h1 {
-	color: #157E8A;
+	color: white;
 	letter-spacing: 1px;
 	text-transform: uppercase;
 	line-height: 0.5;
+	font-size: 45;
 
 }
 
@@ -434,11 +435,13 @@ textarea {
 .subinfo {
 	font-size: 85%;
 	line-height: 0.3;
+	color: white;
 }
 
 .total-incidents {
 	padding-top: 15px;
 	padding-bottom: 10px;
+	color: white;
 }
 
 .result-incidents {
