@@ -226,3 +226,91 @@ function submitComment() {
 		alert("Please enter a name to display. This can be either your real name or an alias.")
 	}
 }
+
+function resultsRowToLink(num) {
+	if (num == 0) {
+		location.href="result_expanded.html";
+	}
+	if (num == 1) {
+		location.href="incident_description.html";
+	}
+}
+
+
+function sortTable(n) {
+	var table, rows, switching, i, x, y, shouldSwitch, dir, switchcount = 0;
+	table = document.getElementById("initial_results");
+	switching = true;
+	dir = "ascending" // set sort direction
+	while (switching) {
+		switching = false;
+		rows = table.getElementsByTagName("TR");
+		for (i = 1; i < (rows.length - 1); i++) { // loop through table rows
+			shouldSwitch = false;
+			x = rows[i].getElementsByTagName("TD")[n];      // compare item in row
+			y = rows[i + 1].getElementsByTagName("TD")[n];  // and item in next row
+
+			if (dir == "ascending") {
+				if (x.innerHTML.toLowerCase() > y.innerHTML.toLowerCase()) {
+					shouldSwitch = true;  // if lower item larger, mark to switch
+					break;				  // and break loop
+				}
+			} else if (dir == "descending") {
+				if (x.innerHTML.toLowerCase() < y.innerHTML.toLowerCase()) {
+					shouldSwitch = true;
+					break;
+				}
+			}
+		}
+		if (shouldSwitch) {
+			rows[i].parentNode.insertBefore(rows[i+1], rows[i]);
+			switching = true;
+			switchcount++;
+		} else {
+			if (switchcount == 0 && dir == "ascending") {
+				dir = "descending";
+				switching = true;
+			}
+		}
+	}
+
+}
+
+function sortTableNum(n) {
+	var table, rows, switching, i, x, y, shouldSwitch, dir, switchcount = 0;
+	table = document.getElementById("initial_results");
+	switching = true;
+	dir = "ascending" // set sort direction
+	while (switching) {
+		switching = false;
+		rows = table.getElementsByTagName("TR");
+		for (i = 1; i < (rows.length - 1); i++) { // loop through table rows
+			shouldSwitch = false;
+			x = rows[i].getElementsByTagName("TD")[n];      // compare item in row
+			y = rows[i + 1].getElementsByTagName("TD")[n];  // and item in next row
+
+			if (dir == "ascending") {
+				if (Number(x.innerHTML) > Number(y.innerHTML)) {
+					shouldSwitch = true;  // if lower item larger, mark to switch
+					break;				  // and break loop
+				}
+			} else if (dir == "descending") {
+				if (Number(x.innerHTML) < Number(y.innerHTML)) {
+					shouldSwitch = true;
+					break;
+				}
+			}
+		}
+		if (shouldSwitch) {
+			rows[i].parentNode.insertBefore(rows[i+1], rows[i]);
+			switching = true;
+			switchcount++;
+		} else {
+			if (switchcount == 0 && dir == "ascending") {
+				dir = "descending";
+				switching = true;
+			}
+		}
+	}
+
+}

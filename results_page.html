@@ -1,16 +1,15 @@
 <html>
     <head>
 	    <title>Record</title>
-        <link rel="stylesheet" type="text/css" href="common.css"/>
-		<link rel="icon" href="image\favicon-16x16.png">
-		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+      <link rel="stylesheet" type="text/css" href="common.css"/>
+		  <link rel="icon" href="image\favicon-16x16.png">
+		  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+		  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
   <!--  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
     <link rel="stylesheet" href="common.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script> -->
-
     </head>
     <body>
 
@@ -29,20 +28,12 @@
 
 
 <!-- SEARCH BAR -->
+<!-- This is where the search text entry happens -->
 <div class="search_region" style="padding-left:100;">
   <input type="text" id="search_box_entry" name="officername" placeholder="Search By: Officer Name"></input>
   <input type="text" id="search_box_entry" name="officerBadge" placeholder="Search By: Officer Badge"></input>
-<!--  <div class="btn-group" id="add_and_search">
-      <button type="button" class="">Add - Search By :</button>
-      <button type="button" class=" dropdown-toggle dropdown-toggle-split" data-toggle="dropdown">
-        <span class="caret"></span>
-      </button>
-      <div class="dropdown-menu">
-        <a class="dropdown-item" href="#">Incident Date</a>
-        <a class="dropdown-item" href="#">Outcome</a>
-        <a class="dropdown-item" href="#">Comments</a>
-        <a class="dropdown-item" href="#">Other Details</a>
-      </div>-->
+      <!-- The Add button will add multiple search options(predefined options in dropdown)
+           and the search calls search based on the text entered in the text-entry boxes. -->
       <div class="dropdown">
         <button class="dropbtn">Add - Search By:</button>
           <div class="dropdown-content">
@@ -125,6 +116,7 @@
 
 </div>
 
+<!-- FOOTER -->
 
 <div class="footer-wrapper">
   <div class="footer-text">
@@ -137,93 +129,3 @@
 <script src="backend.js"></script>
 </body>
 </html>
-
-<script>
-function resultsRowToLink(num) {
-	if (num == 0) {
-		location.href="result_expanded.html";
-	}
-	if (num == 1) {
-		location.href="incident_description.html";
-	}
-}
-
-
-function sortTable(n) {
-	var table, rows, switching, i, x, y, shouldSwitch, dir, switchcount = 0;
-	table = document.getElementById("initial_results");
-	switching = true;
-	dir = "ascending" // set sort direction
-	while (switching) {
-		switching = false;
-		rows = table.getElementsByTagName("TR");
-		for (i = 1; i < (rows.length - 1); i++) { // loop through table rows
-			shouldSwitch = false;
-			x = rows[i].getElementsByTagName("TD")[n];      // compare item in row
-			y = rows[i + 1].getElementsByTagName("TD")[n];  // and item in next row
-
-			if (dir == "ascending") {
-				if (x.innerHTML.toLowerCase() > y.innerHTML.toLowerCase()) {
-					shouldSwitch = true;  // if lower item larger, mark to switch
-					break;				  // and break loop
-				}
-			} else if (dir == "descending") {
-				if (x.innerHTML.toLowerCase() < y.innerHTML.toLowerCase()) {
-					shouldSwitch = true;
-					break;
-				}
-			}
-		}
-		if (shouldSwitch) {
-			rows[i].parentNode.insertBefore(rows[i+1], rows[i]);
-			switching = true;
-			switchcount++;
-		} else {
-			if (switchcount == 0 && dir == "ascending") {
-				dir = "descending";
-				switching = true;
-			}
-		}
-	}
-
-}
-
-function sortTableNum(n) {
-	var table, rows, switching, i, x, y, shouldSwitch, dir, switchcount = 0;
-	table = document.getElementById("initial_results");
-	switching = true;
-	dir = "ascending" // set sort direction
-	while (switching) {
-		switching = false;
-		rows = table.getElementsByTagName("TR");
-		for (i = 1; i < (rows.length - 1); i++) { // loop through table rows
-			shouldSwitch = false;
-			x = rows[i].getElementsByTagName("TD")[n];      // compare item in row
-			y = rows[i + 1].getElementsByTagName("TD")[n];  // and item in next row
-
-			if (dir == "ascending") {
-				if (Number(x.innerHTML) > Number(y.innerHTML)) {
-					shouldSwitch = true;  // if lower item larger, mark to switch
-					break;				  // and break loop
-				}
-			} else if (dir == "descending") {
-				if (Number(x.innerHTML) < Number(y.innerHTML)) {
-					shouldSwitch = true;
-					break;
-				}
-			}
-		}
-		if (shouldSwitch) {
-			rows[i].parentNode.insertBefore(rows[i+1], rows[i]);
-			switching = true;
-			switchcount++;
-		} else {
-			if (switchcount == 0 && dir == "ascending") {
-				dir = "descending";
-				switching = true;
-			}
-		}
-	}
-
-}
-</script>
