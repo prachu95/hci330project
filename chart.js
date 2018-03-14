@@ -82,7 +82,7 @@ function categories() {
   // data from the file name : accused.csv
   var options = {'title':'No. of Complaints based on Categories', 
 				'legend': 'none',
-				'colors':['#157E8A'],
+				'colors':['#204966'],
 				'backgroundColor': 'transparent',
         animation:{
         startup: true,
@@ -145,7 +145,7 @@ function district() {
   // data from the file name : complaints.csv
   var options = {'title':'District-wise complaints registered',
 				'legend': 'none',
-				'colors':['#157E8A'],
+				'colors':['#204966'],
 				'backgroundColor': 'transparent',
                 'width':700,
                 'height': 300,
