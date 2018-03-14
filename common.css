@@ -408,6 +408,7 @@ textarea {
     border-radius: 4px;
     cursor: pointer;
 	display: inline;
+
 }
 
 .back-to-results:hover {
@@ -539,6 +540,25 @@ textarea {
 .view_incidents_button:hover {
     background-color: #0AD1FB;
 }
+
+#back_button {
+	width: 30%;
+	text-decoration: none;
+	font-weight: bold;
+	font-size: 80%;
+    background-color: #157E8A;
+    color: white;
+    padding: 4px 12px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+	display: inline;
+}
+
+#back_button:hover {
+    background-color: #0AD1FB;
+}
+
 
 .latest-incident p {
 	line-height: 1;
