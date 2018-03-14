@@ -179,7 +179,7 @@ function ParseChar(sStr, sChar) {
 }
 
 function submitForm() {
-	
+
 	if (document.getElementById('name').value != "" && document.getElementById('email').value != "" &&
 	 document.getElementById('address').value != "" && document.getElementById('bar').value != "" &&
 	 document.getElementById('oname').value != "" && document.getElementById('badgeID').value != ""
@@ -212,7 +212,7 @@ function submitComment() {
 		if (document.getElementById("new-comment").value != "Share your experience...") {
 			document.getElementById("submitted-username").innerHTML = document.getElementById("new-user").value + ": ";
 			document.getElementById("submitted-comment-text").innerHTML = document.getElementById("new-comment").value;
-			
+
 			document.getElementById("new-comment-area").remove();
 
 		}
@@ -224,52 +224,3 @@ function submitComment() {
 		alert("Please enter a name to display. This can be either your real name or an alias.")
 	}
 }
-
-
-
-/*
-
-        stats.html js elements.
-
-*/
-
-
-
-
-/*
-
-search_page.html js elements.
-
-*/
-
-
-/* When the user clicks on the button,
-toggle between hiding and showing the dropdown content */
-
-
-
-/*
-
--- By Prashanth, will modify thr option by next week.
--- Will change it such that the button gives the drop down menu.
--- 
-
-function addButton() {
-    document.getElementById("addDropdown").classList.toggle("show");
-}
-
-// Close the dropdown if the user clicks outside of it
-window.onclick = function(event) {
-  if (!event.target.matches('.dropbtn')) {
-
-    var dropdowns = document.getElementsByClassName("dropdown-content");
-    var i;
-    for (i = 0; i < dropdowns.length; i++) {
-      var openDropdown = dropdowns[i];
-      if (openDropdown.classList.contains('show')) {
-        openDropdown.classList.remove('show');
-      }
-    }
-  }
-}
-*/
