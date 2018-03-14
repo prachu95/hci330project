@@ -9,10 +9,10 @@ body {
 	position: relative;
 	font-family: Arial, Helvetica, sans-serif;
 	padding-bottom: 200;
-	/*background-image: url("image/chi.jpg");*/
-	background-repeat: no-repeat;
-	background-position: 50% 30%;
-    background-size: 600px 400px;;
+  background: linear-gradient(to bottom right, #033249, #0996dc);
+	/*background-repeat: no-repeat;*/
+	/*background-position: 50% 30%;*/
+    /*background-size: 600px 400px;;*/
 
 }
 
@@ -128,7 +128,7 @@ body {
 	margin-top: 60;
 	box-shadow: 10px 10px 100px #333;
 	border-radius: 5px;
-  background-color: #fff;
+  background-color: white;
   opacity: 0.9;
 }
 
@@ -151,7 +151,7 @@ body {
 	color: white;
 	box-shadow: 0 0 4px #ccc;
 	border-radius: 5px;
-    background-color: #0AD1FB;
+  background-color: #ff1a1a;
 	text-align: center;
 	margin-left: 10%;
 	line-height: 300%;
@@ -184,7 +184,7 @@ body {
 
 .buttons:hover {
 	font-weight: bold;
-	background-color: #157E8A;
+	background-color: #550000;
 	box-shadow: 0 0 7px #ccc;
 
 }
