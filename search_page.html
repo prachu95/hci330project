@@ -7,11 +7,11 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" href="common.css">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+  <!--  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script> -->
     </head>
 
 <body>
@@ -34,7 +34,7 @@
 <div class="search_region" style="padding-left:100;">
   <input type="text" id="search_box_entry" name="officername" placeholder="Search By: Officer Name"></input>
   <input type="text" id="search_box_entry" name="officerBadge" placeholder="Search By: Officer Badge"></input>
-  <div class="btn-group" id="add_and_search">
+<!--  <div class="btn-group" id="add_and_search">
       <button type="button" class="">Add - Search By :</button>
       <button type="button" class=" dropdown-toggle dropdown-toggle-split" data-toggle="dropdown">
         <span class="caret"></span>
@@ -44,10 +44,18 @@
         <a class="dropdown-item" href="#">Outcome</a>
         <a class="dropdown-item" href="#">Comments</a>
         <a class="dropdown-item" href="#">Other Details</a>
+      </div>-->
+      <div class="dropdown">
+        <button class="dropbtn">Add - Search By:</button>
+          <div class="dropdown-content">
+              <a href="#">Incident Date</a>
+              <a href="#">Outcome</a>
+              <a href="#">Comments</a>
+              <a href="#">Other Details</a>
+          </div>
       </div>
-    </div>
     <a href="results_page.html">
-      <button class="search_button" id="add_and_search">Search</button>
+      <button class="dropbtn">Search</button>
     </a>
 </div>
 
