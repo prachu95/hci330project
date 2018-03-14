@@ -63,8 +63,8 @@ body {
 	color: white;
 }
 
-#text_no_decoration{
-	text-decoration: none;
+#header_background{
+	background-color: #DC0028;
 }
 
 /*
