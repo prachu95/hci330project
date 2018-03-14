@@ -22,12 +22,14 @@ body {
   color: white;
 }
 
+
 #page_body {
-	padding-top: 20;
-	padding-left: 15;
-	width: 80%;
-	margin: auto;
+  padding: 50px;
+  margin-left: 50px;
   color: white;
+  font-size: 22px;
+  margin-top: -20px;
+
 }
 
 
