@@ -105,6 +105,7 @@ body {
 	width: 80%;
 	margin-left: auto;
 	margin-right: auto;
+  margin-bottom: 20px;
 	float: left;
 	font-size: 60;
 	padding-left: 70;
@@ -637,9 +638,19 @@ textarea {
   background-color: #eee  ;
 }
 
-.intro-text{
+.intro-text p{
   padding: 50px;
+  margin-left: 50px;
   color: white;
-  font-size: 25px;
+  font-size: 22px;
 
+}
+
+#stats_hr{
+  width: 80%;
+  margin-left: 100px;
+}
+
+hr{
+  width: 80%;
 }
