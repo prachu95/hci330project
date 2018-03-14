@@ -1,90 +1,84 @@
 <html>
-    <head>
-	    <title>Statistics</title>
-        <link rel="stylesheet" type="text/css" href="common.css"/>
-		<link rel="icon" href="image\favicon-16x16.png">
-		<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
-    <script type="text/javascript" src="chart.js"></script>
+<head>
+  <title>Statistics</title>
+  <link rel="stylesheet" type="text/css" href="common.css"/>
+  <link rel="icon" href="image\favicon-16x16.png">
+  <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+  <script type="text/javascript" src="chart.js"></script>
 
-    </head>
-    <body>
+</head>
+<body>
 
-<!-- NAV BAR -->
-<div class="topnav">
-	<div id="home_nav">
-		 <a href="index.html" style="font-size: 20"><img src="image\logo.png" style="width:20px;height:20px;" alt="Home">
-		 <strong>&nbsp;&nbsp;Project Aequitas</strong></div>
-	<a href="search_page.html">Records</a>
-	<a style="background-color: #DC0028" href="stats.html">Statistic</a>
-	<a href="FoIA_page.html">FoIA</a>
-</div>
- <!--
-<div style="padding-left:16px">
-	<h2 id="page_title">Statistics</h2>
-</div>
--->
+  <!-- NAV BAR -->
+  <div class="topnav">
+    <div id="home_nav">
+      <a href="index.html" style="font-size: 20"><img src="image\logo.png" style="width:20px;height:20px;" alt="Home">
+        <strong>&nbsp;&nbsp;Project Aequitas</strong></div>
+        <a href="search_page.html">Records</a>
+        <a style="background-color: #DC0028" href="stats.html">Statistic</a>
+        <a href="FoIA_page.html">FoIA</a>
+      </div>
 
 <div class="intro-text">
+  <h2 id="page_title" style="padding-left:100;">Statistics</h2><hr id="stats_hr">
   <p>
-    This page shows the existing statistics related to police misconduct based on the data collected from the records released by the Chicago police department. The charts show only thecategories with highest number of counts. Some data has been clubed together for easier understanding of the existing situation.
-  </p>
-  <p style="font-size: 18px; float: right;"> *The charts are intended just to inform the users of the current scenario and raise a call for action. Any data on this page is just for reference and should be interpreted the way it is presented.
+    This page shows the existing statistics related to police misconduct based on the data collected from the records released by the Chicago police department. The charts show only the categories with highest number of counts. Some data has been clubed together for easier understanding of the existing situation.The charts are intended just to inform the users of the current scenario and raise a call for action. Any data on this page is just for reference and should be interpreted the way it is presented.
   </p>
 </div>
 
-  <div class="tile">
-	<h1 id="visualization-title">Common Categories of Misconduct</h1>
-	<div class="chart" id="categories" style="width:400; height:300"></div>
-<div class="chart-text">
-	There are many ways that police officers abuse their authority. All the complaints are registered against certian category. Listed are the ten most common complaint
-	categories filed by citizens.
-	</div>
+<div class="tile">
+  <h1 id="visualization-title">Common Categories of Misconduct</h1>
+  <div class="chart" id="categories" style="width:400; height:300"></div>
+  <div class="chart-text">
+    There are many ways that police officers abuse their authority. All the complaints are registered against certian category. Listed are the ten most common complaint
+    categories filed by citizens.
+  </div>
 </div>
 
 
 
-  <div class="tile">
+<div class="tile">
 
-	<h1 id="visualization-title">District Wise Complaints registered</h1>
-	<div class="chart" id="district" style="width:400; height:300"></div>
-	<div class="chart-text">
-	The chart on the left shows the number of complaints received from different districts of the chicago police department.If you belong to district with high number of complaints, you are more likely to be a victim of police misconduct.    
-	</div>
+  <h1 id="visualization-title">District Wise Complaints registered</h1>
+  <div class="chart" id="district" style="width:400; height:300"></div>
+  <div class="chart-text">
+    The chart on the left shows the number of complaints received from different districts of the chicago police department.If you belong to district with high number of complaints, you are more likely to be a victim of police misconduct.    
+  </div>
 </div>
 
-  <div class="tile">
-	<h1 id="visualization-title">Race distribution among accused police officers</h1>
+<div class="tile">
+  <h1 id="visualization-title">Race distribution among accused police officers</h1>
 
-	<div class="chart" id="raceOfOfficers" style="width:400; height:300"></div>
-	<div class="chart-text">
-	This chart shows the racial distribution of the accused officers. As can be seen, the misconduct is not limited to a particular race. An officer of any race maybe a voilator of police authority.
-	</div>
+  <div class="chart" id="raceOfOfficers" style="width:400; height:300"></div>
+  <div class="chart-text">
+    This chart shows the racial distribution of the accused officers. As can be seen, the misconduct is not limited to a particular race. An officer of any race maybe a voilator of police authority.
+  </div>
 </div>
 
 
 
 
 
-  <div class="tile">
-	<h1 id="visualization-title">Demographics Affected</h1>
-		<div class="chart" id="demographies" style="width:400; height:300"></div>
-		<div class="chart-text">
-	Complainants have been classified based on the race and the percentages are shown in the chart on the left. Though the majority of the complaints are from one race, this does not imply that other races cannot be affected.   
-	</div>
+<div class="tile">
+  <h1 id="visualization-title">Demographics Affected</h1>
+  <div class="chart" id="demographies" style="width:400; height:300"></div>
+  <div class="chart-text">
+    Complainants have been classified based on the race and the percentages are shown in the chart on the left. Though the majority of the complaints are from one race, this does not imply that other races cannot be affected.   
+  </div>
 </div>
 
-  <div class="tile">
-	<h1 id="visualization-title">Final Actions Taken against Accused</h1>
-		<div class="chart" id="penalty" style="width:400; height:300"></div>
-		<div class="chart-text">
-	All the cpomplaints filed are processed internally by the police department and an action, deemed fit by an internal panel, is administered. The chart shows that most of the complaints end up in no action being taken. This calls for a serious action to be taken on the issue.  
-	</div>
+<div class="tile">
+  <h1 id="visualization-title">Final Actions Taken against Accused</h1>
+  <div class="chart" id="penalty" style="width:400; height:300"></div>
+  <div class="chart-text">
+    All the cpomplaints filed are processed internally by the police department and an action, deemed fit by an internal panel, is administered. The chart shows that most of the complaints end up in no action being taken. This calls for a serious action to be taken on the issue.  
+  </div>
 </div>
 
 
 <div class="footer-wrapper">
   <div class="footer-text">
-	<p style="font-size: 13;"><b>© Copyright 2018 Project Aequitas. All rights reserved.</b></p>
+    <p style="font-size: 13;"><b>© Copyright 2018 Project Aequitas. All rights reserved.</b></p>
     <p style="font-size: 10;">Contact: <a href="" style="color:#f2f2f2;">info@Aequitas.org</a></p>
     <!-- <p>Kashish Goyal, Spensor Simon, Cameron Roberts, Prashanth Tirupachur Vasanthakrishnan</p> -->
   </div>
