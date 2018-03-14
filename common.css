@@ -10,10 +10,6 @@ body {
 	font-family: Arial, Helvetica, sans-serif;
 	padding-bottom: 200;
   background: linear-gradient(to bottom right, #033249, #0996dc);
-	/*background-repeat: no-repeat;*/
-	/*background-position: 50% 30%;*/
-    /*background-size: 600px 400px;;*/
-
 }
 
 #page_title {
@@ -32,6 +28,10 @@ body {
 
 }
 
+#index_strong{
+  font-size: 22px; 
+  margin-left: 45px;
+}
 
 /*
 
