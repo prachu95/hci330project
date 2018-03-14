@@ -9,7 +9,7 @@ body {
 	position: relative;
 	font-family: Arial, Helvetica, sans-serif;
 	padding-bottom: 200;
-  background: linear-gradient(to bottom right, #033249, #0996dc);
+	background: linear-gradient(to bottom right, #033249, #0996dc);
 	/*background-repeat: no-repeat;*/
 	/*background-position: 50% 30%;*/
     /*background-size: 600px 400px;;*/
@@ -19,7 +19,7 @@ body {
 #page_title {
 	font-size: 50;
 	margin: 20px 10px;
-  color: white;
+	color: white;
 }
 
 
@@ -293,7 +293,7 @@ textarea {
     width: 35%;
 	text-decoration: none;
 	font-weight: bold;
-    background-color: #157E8A;
+    background-color: #004d80;
     color: white;
     padding: 14px 120px;
     border: none;
@@ -320,6 +320,9 @@ textarea {
 	padding-top:  50;
 }
 
+#success_text{
+  text-align: center;
+}
 
 /*
 
