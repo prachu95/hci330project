@@ -314,3 +314,42 @@ function sortTableNum(n) {
 	}
 
 }
+
+function sortTableDate(n) {
+	var table, rows, switching, i, x, y, shouldSwitch, dir, switchcount = 0;
+	table = document.getElementById("initial_results");
+	switching = true;
+	dir = "ascending" // set sort direction
+	while (switching) {
+		switching = false;
+		rows = document.getElementsByTagName("TR");
+		for (i = 1; i < (rows.length - 1); i++) { // loop through table rows
+			shouldSwitch = false;
+			x = rows[i].getElementsByTagName("TD")[n];      // compare item in row
+			y = rows[i + 1].getElementsByTagName("TD")[n];  // and item in next row
+
+			if (dir == "ascending") {
+				if (Date.parse(x.innerHTML) > Date.parse(y.innerHTML)) {
+					shouldSwitch = true;  // if lower item larger, mark to switch
+					break;				  // and break loop
+				}
+			} else if (dir == "descending") {
+				if (Date.parse(x.innerHTML) < Date.parse(y.innerHTML)) {
+					shouldSwitch = true;
+					break;
+				}
+			}
+		}
+		if (shouldSwitch) {
+			rows[i].parentNode.insertBefore(rows[i+1], rows[i]);
+			switching = true;
+			switchcount++;
+		} else {
+			if (switchcount == 0 && dir == "ascending") {
+				dir = "descending";
+				switching = true;
+			}
+		}
+	}
+
+}
