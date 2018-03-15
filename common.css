@@ -482,6 +482,10 @@ textarea {
 	color: white;
 }
 
+#sort-icon {
+	cursor: pointer;
+}
+
 #back-text {
 	color: white;
 	text-align: center;
