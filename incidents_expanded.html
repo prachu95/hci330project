@@ -51,11 +51,11 @@
     	<!--	<th>
       </span></th> -->
   		</tr>
+  		<!-- resultsRowToLink() function loads a new page when the table row is clicked on -->
   		<tr onclick="resultsRowToLink(1)">
     		<td>123 Main St., Chicago</td>
     		<td>January 1, 2011</td>
     		<td>No action taken</td>
-
 
  		 </tr>
  		 <tr onclick="resultsRowToLink(1)">
@@ -142,15 +142,6 @@
 <script src="backend.js"></script>
 
 <script>
-
-function resultsRowToLink(num) {
-	if (num == 0) {
-		location.href="result_expanded.html";
-	}
-	if (num == 1) {
-		location.href="incident_description.html";
-	}
-}
 
 function sortTable(n) {
 	var table, rows, switching, i, x, y, shouldSwitch, dir, switchcount = 0;
