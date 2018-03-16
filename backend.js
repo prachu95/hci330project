@@ -6,12 +6,14 @@ FoIA_page.html js elements.
 
     */
 
-
+//global variables
 var zChar = new Array(' ', '(', ')', '-', '.');
 var maxphonelength = 13;
 var phonevalue1;
 var phonevalue2;
 var cursorposition;
+
+
 
 function ParseForNumber1(object) {
     phonevalue1 = ParseChar(object.value, zChar);
@@ -55,7 +57,6 @@ function backspacerDOWN(object, e) {
 }
 
 function GetCursorPosition() {
-
     var t1 = phonevalue1;
     var t2 = phonevalue2;
     var bool = false
@@ -69,6 +70,7 @@ function GetCursorPosition() {
     }
 }
 
+// ValidatePhone: verifies user enters number, removes other entries
 function ValidatePhone(object) {
 
     var p = phonevalue1
@@ -154,6 +156,7 @@ function ValidatePhone(object) {
 
 }
 
+// ParseChar: formats entered phone number
 function ParseChar(sStr, sChar) {
     if (sChar.length == null) {
         zChar = new Array(sChar);
@@ -178,6 +181,7 @@ function ParseChar(sStr, sChar) {
     return sNewStr;
 }
 
+// submitForm: verifies that user has entered information completely and changes page to success page
 function submitForm() {
 
 	if (document.getElementById('name').value != "" && document.getElementById('email').value != "" &&
@@ -192,26 +196,17 @@ function submitForm() {
 }
 
 
-
-/*
-
-index.html js elements.
-
-*/
-
-
-
-
-
 /*
 
     result_page.html js elements.
 
 */
 
+// submitComment: checks that user has entered username and comment and changes the value of an empty
+// comment to the user entered info; if user has left field blank, pops up error
 function submitComment() {
 	if (document.getElementById("new-user").value != "") {
-		if (document.getElementById("new-comment").value != "Share your experience...") {
+		if (document.getElementById("new-comment").value != "") {
 			document.getElementById("submitted-username").innerHTML = document.getElementById("new-user").value + ": ";
 			document.getElementById("submitted-comment-text").innerHTML = document.getElementById("new-comment").value;
 
