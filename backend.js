@@ -222,6 +222,7 @@ function submitComment() {
 	}
 }
 
+// loads new page when table row is clicked on
 function resultsRowToLink(num) {
 	if (num == 0) {
 		location.href="result_expanded.html";
@@ -231,6 +232,9 @@ function resultsRowToLink(num) {
 	}
 }
 
+// The following sortTable functions sort the results table and the incidents table
+// when the sort icon in the table heading column is clicked. The first function sorts text,
+// the second sorts numbers, and the third sorts dates
 
 function sortTable(n) {
 	var table, rows, switching, i, x, y, shouldSwitch, dir, switchcount = 0;
